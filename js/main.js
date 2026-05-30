@@ -421,59 +421,56 @@
 
         const parentItem = servicesLink.closest('li');
 
-        if (!parentItem || parentItem.classList.contains('nav-item--services')) return;
+        if (!parentItem) return;
 
-        parentItem.classList.add('nav-item--services');
+        parentItem.classList.add('nav-services-item');
+        servicesLink.classList.add('nav-services-trigger');
 
         servicesLink.setAttribute('aria-haspopup', 'true');
         servicesLink.setAttribute('aria-expanded', 'false');
 
+        const oldDropdowns = parentItem.querySelectorAll(
+            '.services-dropdown, .nav-services-dropdown'
+        );
+
+        oldDropdowns.forEach(function (dropdown) {
+            dropdown.remove();
+        });
+
         const dropdown = document.createElement('div');
-        dropdown.className = 'services-dropdown';
+        dropdown.className = 'nav-services-dropdown';
         dropdown.setAttribute('role', 'menu');
         dropdown.hidden = true;
 
-        const dropdownInner = document.createElement('div');
-        dropdownInner.className = 'services-dropdown__inner';
-
         CONFIG.services.forEach(function (service) {
             const item = document.createElement('a');
+
             item.href = service.href;
-            item.className = 'services-dropdown__item';
+            item.className = 'nav-services-dropdown__link';
             item.setAttribute('role', 'menuitem');
+            item.textContent = service.title;
 
-            item.innerHTML = `
-                <span class="services-dropdown__icon" aria-hidden="true">
-                    <i class="fa-solid ${service.icon}"></i>
-                </span>
-                <span class="services-dropdown__content">
-                    <strong>${escapeHtml(service.title)}</strong>
-                    <small>${escapeHtml(service.summary)}</small>
-                </span>
-            `;
-
-            dropdownInner.appendChild(item);
+            dropdown.appendChild(item);
         });
 
-        dropdown.appendChild(dropdownInner);
         parentItem.appendChild(dropdown);
 
         let closeTimer = null;
 
-        const openDropdown = function () {
+        function openDropdown() {
             clearTimeout(closeTimer);
             dropdown.hidden = false;
             parentItem.classList.add('is-open');
             servicesLink.setAttribute('aria-expanded', 'true');
-        };
+        }
 
-        const closeDropdown = function () {
+        function closeDropdown() {
             closeTimer = setTimeout(function () {
                 dropdown.hidden = true;
                 parentItem.classList.remove('is-open');
                 servicesLink.setAttribute('aria-expanded', 'false');
-            }, 120);
-        };
+            }, 180);
+        }
 
         parentItem.addEventListener('mouseenter', openDropdown);
         parentItem.addEventListener('mouseleave', closeDropdown);
@@ -491,7 +488,6 @@
                 dropdown.hidden = true;
                 parentItem.classList.remove('is-open');
                 servicesLink.setAttribute('aria-expanded', 'false');
-                servicesLink.blur();
             }
         });
 
