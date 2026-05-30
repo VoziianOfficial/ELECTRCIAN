@@ -2801,3 +2801,26 @@ h6 {
         display: none !important;
     }
 }
+
+/* =========================================================
+   FINAL STICKY HEADER FIX
+   ========================================================= */
+
+html,
+body {
+    overflow-x: clip;
+}
+
+.site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9990 !important;
+    width: 100%;
+    transform: none !important;
+    will-change: auto;
+}
+
+.topbar {
+    position: relative;
+    z-index: 9980;
+}
