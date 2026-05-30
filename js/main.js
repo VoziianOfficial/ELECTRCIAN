@@ -780,11 +780,18 @@
     }
 
     function initCookieBanner() {
-        const storageKey = CONFIG.cookieBanner.storageKey;
+        const storageKey =
+            CONFIG.cookieBanner && CONFIG.cookieBanner.storageKey
+                ? CONFIG.cookieBanner.storageKey
+                : 'electrcian_cookie_choice';
 
-        if (!storageKey) return;
+        let savedChoice = null;
 
-        const savedChoice = localStorage.getItem(storageKey);
+        try {
+            savedChoice = localStorage.getItem(storageKey);
+        } catch (error) {
+            savedChoice = null;
+        }
 
         if (savedChoice) return;
 
@@ -797,27 +804,29 @@
             banner.setAttribute('aria-label', 'Cookie preferences');
 
             banner.innerHTML = `
-                <div class="cookie-banner__inner">
-                    <div class="cookie-banner__content">
-                        <h3>${escapeHtml(CONFIG.cookieBanner.title)}</h3>
-                        <p>${escapeHtml(CONFIG.cookieBanner.text)}</p>
-                        <div class="cookie-banner__links">
-                            <a href="privacy-policy.html">Privacy Policy</a>
-                            <a href="cookie-policy.html">Cookie Policy</a>
-                            <a href="terms-of-service.html">Terms of Service</a>
-                        </div>
-                    </div>
+            <div class="cookie-banner__inner">
+                <div class="cookie-banner__content">
+                    <h3>${escapeHtml(CONFIG.cookieBanner.title || 'Cookie preferences')}</h3>
+                    <p>${escapeHtml(CONFIG.cookieBanner.text || 'This website may use basic storage to remember your cookie preference.')}</p>
 
-                    <div class="cookie-banner__actions">
-                        <button class="btn btn--ghost-light" type="button" data-cookie-decline>
-                            ${escapeHtml(CONFIG.cookieBanner.declineText)}
-                        </button>
-                        <button class="btn btn--accent" type="button" data-cookie-accept>
-                            ${escapeHtml(CONFIG.cookieBanner.acceptText)}
-                        </button>
+                    <div class="cookie-banner__links">
+                        <a href="./privacy-policy.html">Privacy Policy</a>
+                        <a href="./cookie-policy.html">Cookie Policy</a>
+                        <a href="./terms-of-service.html">Terms of Service</a>
                     </div>
                 </div>
-            `;
+
+                <div class="cookie-banner__actions">
+                    <button class="btn btn--ghost-light" type="button" data-cookie-decline>
+                        ${escapeHtml(CONFIG.cookieBanner.declineText || 'Decline')}
+                    </button>
+
+                    <button class="btn btn--accent" type="button" data-cookie-accept>
+                        ${escapeHtml(CONFIG.cookieBanner.acceptText || 'Accept')}
+                    </button>
+                </div>
+            </div>
+        `;
 
             document.body.appendChild(banner);
         }
@@ -842,7 +851,12 @@
         }
 
         function saveCookieChoice(choice) {
-            localStorage.setItem(storageKey, choice);
+            try {
+                localStorage.setItem(storageKey, choice);
+            } catch (error) {
+                console.warn('Cookie preference could not be saved.', error);
+            }
+
             banner.classList.remove('is-visible');
         }
     }
