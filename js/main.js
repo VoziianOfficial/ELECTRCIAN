@@ -125,6 +125,34 @@
                 title: 'Contact Electrcian | Request Electrical Provider Options',
                 description:
                     'Submit your electrical project details and compare local provider options.'
+            },
+            'electrical-repair.html': {
+                title: 'Electrical Repair Provider Options | Electrcian',
+                description: 'Compare local electrical repair provider options for outlets, switches, breakers, flickering lights, and power concerns.'
+            },
+            'panel-upgrades.html': {
+                title: 'Panel Upgrade Provider Options | Electrcian',
+                description: 'Compare provider options for panel upgrades, breaker panel replacement, capacity needs, and permit-related quote details.'
+            },
+            'wiring-rewiring.html': {
+                title: 'Wiring & Rewiring Provider Options | Electrcian',
+                description: 'Compare wiring and rewiring provider options for new circuits, remodel wiring, outdoor wiring, and electrical layout updates.'
+            },
+            'ev-charger-installation.html': {
+                title: 'EV Charger Installation Provider Options | Electrcian',
+                description: 'Compare provider options for EV charger installation, dedicated circuits, panel readiness, and permit notes.'
+            },
+            'privacy-policy.html': {
+                title: 'Privacy Policy | Electrcian',
+                description: 'Read the Electrcian privacy policy for website data, contact requests, and provider comparison support.'
+            },
+            'cookie-policy.html': {
+                title: 'Cookie Policy | Electrcian',
+                description: 'Read the Electrcian cookie policy and learn how browser storage may be used for cookie preferences.'
+            },
+            'terms-of-service.html': {
+                title: 'Terms of Service | Electrcian',
+                description: 'Read the Electrcian terms of service for this independent electrical provider matching website.'
             }
         }
     };
@@ -608,20 +636,39 @@
 
     function initActiveNavigation() {
         const currentFile = getCurrentFileName();
+
+        const normalizeHref = function (href) {
+            if (!href) return '';
+
+            const clean = href.split('#')[0].split('?')[0];
+
+            return clean
+                .replace('./', '')
+                .replace(/^\//, '') || 'index.html';
+        };
+
         const navLinks = document.querySelectorAll(
             '.main-nav a[href], .mobile-nav a[href], .footer__links a[href]'
         );
 
         navLinks.forEach(function (link) {
             const href = link.getAttribute('href');
+            const cleanHref = normalizeHref(href);
 
-            if (!href) return;
-
-            const cleanHref = href.split('#')[0];
+            if (cleanHref === currentFile) {
+                link.classList.add('is-active');
+            }
 
             if (
-                cleanHref === currentFile ||
-                (currentFile === 'index.html' && cleanHref === './index.html')
+                currentFile === 'index.html' &&
+                (cleanHref === 'index.html' || cleanHref === '')
+            ) {
+                link.classList.add('is-active');
+            }
+
+            if (
+                document.body.classList.contains('page-service') &&
+                cleanHref === 'services.html'
             ) {
                 link.classList.add('is-active');
             }
