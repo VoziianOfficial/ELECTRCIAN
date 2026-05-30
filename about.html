@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Electrcian | Electrical Provider Matching Platform</title>
+    <meta name="description"
+        content="Learn how Electrcian helps homeowners compare local electrical providers without performing work directly." />
+
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+    <link rel="apple-touch-icon" href="./assets/icons/logo.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="page-about">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div class="container topbar__inner">
+            <p class="topbar__note">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                <span data-service-area>
+                    Independent electrical provider matching across selected areas in the United States
+                </span>
+            </p>
+
+            <div class="topbar__meta">
+                <a href="tel:+18885550192" class="topbar__link" data-phone-link>
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                    <span data-phone-text>(888) 555-0192</span>
+                </a>
+
+                <span class="topbar__divider" aria-hidden="true"></span>
+
+                <p class="topbar__location">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <span data-address-text>214 Market Street, Denver, CO 80202, USA</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header__inner">
+            <a href="./index.html" class="site-logo" aria-label="Electrcian home">
+                <span class="site-logo__icon">
+                    <img src="./assets/icons/logo.svg" alt="" aria-hidden="true" />
+                </span>
+                <span class="site-logo__text" data-company-name>Electrcian</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Primary navigation">
+                <ul class="main-nav__list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./about.html" class="is-active">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:+18885550192" class="header__phone" data-phone-link>
+                    <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
+                    <span data-phone-text>(888) 555-0192</span>
+                </a>
+
+                <a href="./contact.html#contact-form" class="btn btn--accent">
+                    <span>Request Quotes</span>
+                </a>
+
+                <button class="burger" type="button" aria-label="Open menu" aria-controls="mobileMenu"
+                    aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true" data-mobile-menu>
+        <div class="mobile-menu__overlay"></div>
+
+        <div class="mobile-menu__panel">
+            <div class="mobile-menu__head">
+                <a href="./index.html" class="site-logo site-logo--mobile" aria-label="Electrcian home">
+                    <span class="site-logo__icon">
+                        <img src="./assets/icons/logo.svg" alt="" aria-hidden="true" />
+                    </span>
+                    <span class="site-logo__text" data-company-name>Electrcian</span>
+                </a>
+
+                <button class="mobile-menu__close" type="button" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+                <ul class="mobile-nav__list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu__services">
+                <p class="mobile-menu__label">Service categories</p>
+                <div class="mobile-menu__service-list" data-services-list="cards"></div>
+            </div>
+
+            <div class="mobile-menu__contact">
+                <a href="tel:+18885550192" data-phone-link>
+                    <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
+                    <span data-phone-text>(888) 555-0192</span>
+                </a>
+
+                <a href="mailto:hello@electrcian.com" data-email-link>
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <span data-email-text>hello@electrcian.com</span>
+                </a>
+            </div>
+
+            <p class="mobile-menu__notice" data-legal-notice>
+                Electrcian is an independent provider-matching platform and does not perform electrical work directly.
+            </p>
+
+            <a href="./contact.html#contact-form" class="btn btn--accent btn--full">
+                Request Provider Options
+            </a>
+        </div>
+    </aside>
+
+    <main id="main">
+        <!-- 1. ABOUT HERO -->
+        <section class="hero about-hero" id="about-hero" data-section="About">
+            <div class="hero__bg"></div>
+            <div class="hero__overlay"></div>
+
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <span class="section-kicker section-kicker--accent">
+                        <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                        About the platform
+                    </span>
+
+                    <h1 class="hero__title">
+                        Electrical provider comparison made clearer.
+                    </h1>
+
+                    <p class="hero__text">
+                        {{companyName}} was created to help homeowners organize electrical project
+                        details, understand provider comparison factors, and request independent
+                        electrical provider options without assuming one company fits every job.
+                    </p>
+
+                    <div class="hero__buttons">
+                        <a href="./services.html" class="btn btn--accent">
+                            <span>View Services</span>
+                        </a>
+
+                        <a href="./contact.html#contact-form" class="btn btn--ghost">
+                            <span>Request Provider Options</span>
+                        </a>
+                    </div>
+
+                    <div class="hero__benefits">
+                        <div class="benefit-chip">
+                            <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                            <span>Independent comparison</span>
+                        </div>
+
+                        <div class="benefit-chip">
+                            <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
+                            <span>Quote clarity focus</span>
+                        </div>
+
+                        <div class="benefit-chip">
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                            <span>Verification reminders</span>
+                        </div>
+
+                        <div class="benefit-chip">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            <span>Availability may vary</span>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="about-hero__card form-card">
+                    <div class="form-card__head">
+                        <h2>Not a contractor</h2>
+                        <p>
+                            {{companyName}} does not perform electrical work directly.
+                            The platform helps organize provider comparison.
+                        </p>
+                    </div>
+
+                    <ul class="check-list">
+                        <li>Compare service categories</li>
+                        <li>Review provider fit</li>
+                        <li>Prepare quote questions</li>
+                        <li>Verify license and insurance</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- 2. COMPANY STORY -->
+        <section class="section section--light about-story" id="company-story" data-section="Story">
+            <div class="container about-story__grid">
+                <div class="about-story__content">
+                    <span class="section-kicker">Why Electrcian exists</span>
+                    <h2>Electrical projects can feel unclear before the first quote.</h2>
+
+                    <p>
+                        Many homeowners know something is wrong — a breaker keeps tripping,
+                        an outlet feels unsafe, lights flicker, a panel seems outdated, or an EV
+                        charger is needed — but they may not know which provider category fits
+                        the project.
+                    </p>
+
+                    <p>
+                        {{companyName}} was built to make that early stage easier. Instead of
+                        presenting itself as an electrical contractor, the platform helps homeowners
+                        compare independent provider options, understand what details may affect a
+                        quote, and prepare better questions before choosing a provider directly.
+                    </p>
+
+                    <p>
+                        {{companyName}} is not a contractor, does not employ electricians for direct
+                        work, and does not perform, supervise, or guarantee electrical services.
+                    </p>
+                </div>
+
+                <div class="about-story__visual">
+                    <div class="about-story__image"></div>
+
+                    <div class="about-story__note">
+                        <i class="fa-solid fa-shield-bolt" aria-hidden="true"></i>
+                        <div>
+                            <strong>Aggregator-safe model</strong>
+                            <span>
+                                Homeowners remain responsible for verifying license, insurance,
+                                permits, written scope, and quote details.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. AGGREGATOR MODEL -->
+        <section class="section section--white about-model" id="aggregator-model" data-section="Model">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <span class="section-kicker">Aggregator model</span>
+                    <h2>What Electrcian helps with — and what it does not do.</h2>
+                    <p>
+                        This clear separation keeps the website honest, useful, and focused on
+                        provider comparison rather than direct electrical work.
+                    </p>
+                </div>
+
+                <div class="about-model__grid">
+                    <article class="about-model__panel about-model__panel--positive">
+                        <div class="about-model__icon">
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                        </div>
+
+                        <h3>Electrcian helps with</h3>
+
+                        <ul class="check-list">
+                            <li>Organizing electrical service categories</li>
+                            <li>Preparing homeowners to compare quote options</li>
+                            <li>Connecting homeowners with independent provider options</li>
+                            <li>Highlighting project factors that may affect fit</li>
+                            <li>Reminding users what to verify before hiring</li>
+                        </ul>
+                    </article>
+
+                    <article class="about-model__panel about-model__panel--negative">
+                        <div class="about-model__icon">
+                            <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+                        </div>
+
+                        <h3>Electrcian does not</h3>
+
+                        <ul class="check-list">
+                            <li>Perform electrical work directly</li>
+                            <li>Employ electricians for homeowner projects</li>
+                            <li>Guarantee provider work or pricing</li>
+                            <li>Supervise independent contractors</li>
+                            <li>Replace license, insurance, or permit verification</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. RUNNING SERVICE TICKER -->
+        <section class="about-ticker-section" id="service-ticker" data-section="Ticker">
+            <div class="about-ticker" aria-label="Electrical service topics">
+                <div class="about-ticker__track">
+                    <a href="./electrical-repair.html">Electrical Repair</a>
+                    <a href="./panel-upgrades.html">Panel Upgrades</a>
+                    <a href="./wiring-rewiring.html">Wiring & Rewiring</a>
+                    <a href="./ev-charger-installation.html">EV Charger Installation</a>
+                    <a href="./services.html#quote-clarity">Quote Clarity</a>
+                    <a href="./services.html#object-tabs">Circuit Notes</a>
+                    <a href="./services.html#selection-notes">Permit Questions</a>
+                    <a href="./services.html">Provider Comparison</a>
+
+                    <a href="./electrical-repair.html">Electrical Repair</a>
+                    <a href="./panel-upgrades.html">Panel Upgrades</a>
+                    <a href="./wiring-rewiring.html">Wiring & Rewiring</a>
+                    <a href="./ev-charger-installation.html">EV Charger Installation</a>
+                    <a href="./services.html#quote-clarity">Quote Clarity</a>
+                    <a href="./services.html#object-tabs">Circuit Notes</a>
+                    <a href="./services.html#selection-notes">Permit Questions</a>
+                    <a href="./services.html">Provider Comparison</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PROVIDER FIT LENS -->
+        <section class="why-compare section section--dark" id="provider-fit" data-section="Fit">
+            <div class="container">
+                <div class="section-heading section-heading--center section-heading--light">
+                    <span class="section-kicker">Provider fit lens</span>
+                    <h2>What homeowners should compare before choosing.</h2>
+                    <p>
+                        Electrical provider fit is not only about price. Scope, timeline, permits,
+                        materials, service call fees, and warranty details can all matter.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                        <h3>Project scope</h3>
+                        <p>Compare what each provider includes and excludes in the written scope.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                        <h3>Timeline</h3>
+                        <p>Provider availability and project timing can vary by ZIP code and category.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i>
+                        <h3>Service call fee</h3>
+                        <p>Ask whether a diagnostic or visit fee applies before work begins.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+                        <h3>Materials</h3>
+                        <p>Review materials, fixture types, panels, breakers, wiring, and charger needs.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+                        <h3>Permits</h3>
+                        <p>Some projects may require permits or inspections depending on local rules.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        <h3>Warranty</h3>
+                        <p>Compare warranty terms, workmanship coverage, and what is documented.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <h3>Availability</h3>
+                        <p>Independent provider availability may vary by project type and area.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. ELECTRICAL SAFETY REMINDER -->
+        <section class="section section--light about-safety" id="safety-reminder" data-section="Safety">
+            <div class="container about-safety__inner">
+                <div class="about-safety__content">
+                    <span class="section-kicker">Electrical safety reminder</span>
+                    <h2>Electrical work can involve code, permits, and safety requirements.</h2>
+                    <p>
+                        Homeowners should verify license, insurance, local permit requirements,
+                        quote scope, warranty terms, and provider qualifications before hiring
+                        any electrical provider.
+                    </p>
+                </div>
+
+                <div class="about-safety__card">
+                    <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                    <h3>Urgent warning signs</h3>
+                    <ul>
+                        <li>Burning smell</li>
+                        <li>Hot outlets or switches</li>
+                        <li>Exposed wiring</li>
+                        <li>Sparks or smoke</li>
+                        <li>Repeated breaker failure</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FAQ + CTA -->
+        <section class="section section--white about-faq" id="about-faq" data-section="FAQ">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <span class="section-kicker">About Electrcian FAQ</span>
+                    <h2>Clear answers about how the platform works.</h2>
+                </div>
+
+                <div class="faq-list">
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            Is Electrcian an electrical contractor?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                No. Electrcian is an independent provider-matching platform and does
+                                not perform electrical work directly.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            What does Electrcian help homeowners do?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Electrcian helps homeowners organize project details, review electrical
+                                service categories, and compare independent provider options.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            Does Electrcian guarantee provider work?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                No. Providers are independent. Electrcian does not warrant, supervise,
+                                or guarantee work performed by any provider.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            What should homeowners verify before hiring?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Homeowners should verify license, insurance, permit requirements,
+                                written quote details, service call fees, timeline, and warranty terms.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="cta-banner section" id="about-cta" data-section="CTA">
+            <div class="container">
+                <div class="cta-banner__inner">
+                    <div class="cta-banner__content">
+                        <span class="section-kicker section-kicker--accent">
+                            Ready to compare?
+                        </span>
+                        <h2>Start with the project category, then compare provider fit.</h2>
+                        <p>
+                            Review service categories and request independent provider options
+                            for repair, panel, wiring, and EV charger projects.
+                        </p>
+                    </div>
+
+                    <div class="cta-banner__actions">
+                        <a href="./services.html" class="btn btn--accent">
+                            <span>View Services</span>
+                        </a>
+
+                        <a href="./contact.html#contact-form" class="btn btn--ghost-light">
+                            <span>Request Provider Options</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="footer">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <a href="./index.html" class="site-logo site-logo--footer">
+                    <span class="site-logo__icon">
+                        <img src="./assets/icons/logo.svg" alt="" aria-hidden="true" />
+                    </span>
+                    <span class="site-logo__text" data-company-name>Electrcian</span>
+                </a>
+
+                <p class="footer__text" data-footer-text>
+                    Electrcian helps homeowners compare local electrical provider options for repair,
+                    panel, wiring, and EV charger projects. Providers are independent and availability
+                    may vary by location.
+                </p>
+
+                <p class="footer__text">
+                    Company ID:
+                    <strong data-company-id>ELC-USA-2048</strong>
+                </p>
+
+                <div class="footer__socials">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <h3>Navigation</h3>
+                <ul class="footer__links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h3>Services</h3>
+                <ul class="footer__links">
+                    <li><a href="./electrical-repair.html">Electrical Repair</a></li>
+                    <li><a href="./panel-upgrades.html">Panel Upgrades</a></li>
+                    <li><a href="./wiring-rewiring.html">Wiring & Rewiring</a></li>
+                    <li><a href="./ev-charger-installation.html">EV Charger Installation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h3>Contact</h3>
+                <ul class="footer__contact">
+                    <li>
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        <a href="tel:+18885550192" data-phone-link data-phone-text>
+                            (888) 555-0192
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:hello@electrcian.com" data-email-link data-email-text>
+                            hello@electrcian.com
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <span data-address-text>214 Market Street, Denver, CO 80202, USA</span>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                        <span data-service-area>
+                            Independent electrical provider matching across selected areas in the United States
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer__bottom">
+            <p>© 2026 <span data-company-name>Electrcian</span>. All rights reserved.</p>
+
+            <div class="footer__legal">
+                <a href="./privacy-policy.html">Privacy Policy</a>
+                <a href="./cookie-policy.html">Cookie Policy</a>
+                <a href="./terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
+
+        <div class="container footer__disclaimer">
+            <p data-disclaimer>
+                Disclaimer: This site is a free service to assist homeowners in connecting with local service providers.
+                All contractors/providers are independent and this site does not warrant or guarantee any work
+                performed.
+                It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary
+                license and insurance required for the work being performed. All persons depicted in a photo or video
+                are
+                actors or models and not contractors listed on this site.
+            </p>
+        </div>
+    </footer>
+
+<script src="./assets/js/config.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/about.js"></script>
+</body>
+
+</html>

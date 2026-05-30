@@ -1,0 +1,90 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bulbGlow" x1="256" y1="64" x2="256" y2="388" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#FFE766"/>
+            <stop offset="55%" stop-color="#FFD21A"/>
+            <stop offset="100%" stop-color="#F15A24"/>
+        </linearGradient>
+
+        <linearGradient id="baseGrad" x1="256" y1="336" x2="256" y2="444" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#2F363E"/>
+            <stop offset="100%" stop-color="#12161B"/>
+        </linearGradient>
+
+        <filter id="softGlow" x="40" y="20" width="432" height="432" filterUnits="userSpaceOnUse">
+            <feGaussianBlur stdDeviation="14" result="blur"/>
+            <feColorMatrix
+                in="blur"
+                type="matrix"
+                values="1 0 0 0 0
+                        0 0.84 0 0 0
+                        0 0.1 0 0 0
+                        0 0 0 0.35 0"/>
+            <feBlend in="SourceGraphic" mode="normal"/>
+        </filter>
+
+        <filter id="innerGlow" x="120" y="90" width="272" height="220" filterUnits="userSpaceOnUse">
+            <feGaussianBlur stdDeviation="6" result="blur2"/>
+            <feColorMatrix
+                in="blur2"
+                type="matrix"
+                values="1 0 0 0 0
+                        0 0.9 0 0 0
+                        0 0.25 0 0 0
+                        0 0 0 0.45 0"/>
+            <feBlend in="SourceGraphic" mode="screen"/>
+        </filter>
+    </defs>
+
+    <g opacity="0.95">
+        <path d="M256 48V88" stroke="#FFD21A" stroke-width="16" stroke-linecap="round"/>
+        <path d="M148 88L172 112" stroke="#FFD21A" stroke-width="14" stroke-linecap="round"/>
+        <path d="M364 88L340 112" stroke="#FFD21A" stroke-width="14" stroke-linecap="round"/>
+        <path d="M104 188H140" stroke="#FFD21A" stroke-width="14" stroke-linecap="round"/>
+        <path d="M372 188H408" stroke="#FFD21A" stroke-width="14" stroke-linecap="round"/>
+    </g>
+
+    <g filter="url(#softGlow)">
+        <path
+            d="M256 84C176.471 84 112 148.471 112 228C112 281.948 141.648 328.974 185.5 353.625C196.475 359.796 204 370.95 204 383.54V392C204 405.255 214.745 416 228 416H284C297.255 416 308 405.255 308 392V383.54C308 370.95 315.525 359.796 326.5 353.625C370.352 328.974 400 281.948 400 228C400 148.471 335.529 84 256 84Z"
+            fill="url(#bulbGlow)"
+            fill-opacity="0.18"/>
+    </g>
+
+    <path
+        d="M256 92C180.889 92 120 152.889 120 228C120 279.686 148.37 324.749 190.252 348.295C203.822 355.924 212 369.881 212 385.448V390C212 399.941 220.059 408 230 408H282C291.941 408 300 399.941 300 390V385.448C300 369.881 308.178 355.924 321.748 348.295C363.63 324.749 392 279.686 392 228C392 152.889 331.111 92 256 92Z"
+        fill="url(#bulbGlow)"
+        stroke="#12161B"
+        stroke-width="18"
+        stroke-linejoin="round"/>
+
+    <path
+        d="M183 176C195 145 224 124 259 120"
+        stroke="#FFF4B2"
+        stroke-width="14"
+        stroke-linecap="round"
+        opacity="0.95"/>
+
+    <g filter="url(#innerGlow)">
+        <path
+            d="M278 148L222 242H258L234 316L294 218H256L278 148Z"
+            fill="#12161B"/>
+        <path
+            d="M278 148L222 242H258L234 316L294 218H256L278 148Z"
+            stroke="#12161B"
+            stroke-width="8"
+            stroke-linejoin="round"/>
+    </g>
+
+    <path d="M220 306C220 306 232 324 256 324C280 324 292 306 292 306" stroke="#12161B" stroke-width="10" stroke-linecap="round"/>
+    <path d="M228 332L228 348" stroke="#12161B" stroke-width="8" stroke-linecap="round"/>
+    <path d="M284 332L284 348" stroke="#12161B" stroke-width="8" stroke-linecap="round"/>
+
+    <path d="M212 390H300" stroke="#12161B" stroke-width="12" stroke-linecap="round"/>
+    <path d="M216 410H296" stroke="#12161B" stroke-width="12" stroke-linecap="round"/>
+
+    <rect x="196" y="420" width="120" height="28" rx="14" fill="url(#baseGrad)" stroke="#12161B" stroke-width="10"/>
+    <rect x="208" y="448" width="96" height="24" rx="12" fill="url(#baseGrad)" stroke="#12161B" stroke-width="10"/>
+
+    <rect x="232" y="474" width="48" height="18" rx="9" fill="#F15A24" stroke="#12161B" stroke-width="8"/>
+</svg>

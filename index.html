@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+    <link rel="apple-touch-icon" href="./assets/icons/logo.svg" />
+    <title>Electrcian — Compare Local Electrical Providers</title>
+    <meta name="description"
+        content="Electrcian is an independent electrical provider matching platform that helps homeowners compare local electrical service providers." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div class="container topbar__inner">
+            <p class="topbar__note">
+                <i class="fa-solid fa-bolt"></i>
+                Independent electrical provider matching across the USA
+            </p>
+
+            <div class="topbar__meta">
+                <a href="tel:+18885550192" class="topbar__link">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>(888) 555-0192</span>
+                </a>
+                <span class="topbar__divider"></span>
+                <p class="topbar__location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Denver, CO 80202
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header__inner">
+            <a href="./index.html" class="site-logo" aria-label="Electrcian home">
+            <span class="site-logo__icon">
+                <img src="./assets/icons/logo.svg" alt="" aria-hidden="true">
+            </span>
+                <span class="site-logo__text">Electrcian</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Primary navigation">
+                <ul class="main-nav__list">
+                    <li><a href="#hero" class="is-active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#safety">Safety</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:+18885550192" class="header__phone">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>(888) 555-0192</span>
+                </a>
+
+                <a href="#quote-form" class="btn btn--accent">
+                    <span>Write / Get Quotes</span>
+                </a>
+
+                <button class="burger" type="button" aria-label="Open menu" aria-controls="mobileMenu"
+                    aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu__overlay"></div>
+
+        <div class="mobile-menu__panel">
+            <div class="mobile-menu__head">
+                <a href="./index.html" class="site-logo site-logo--mobile" aria-label="Electrcian home">
+                <span class="site-logo__icon">
+                    <img src="./assets/icons/logo.svg" alt="" aria-hidden="true">
+                </span>
+                    <span class="site-logo__text">Electrcian</span>
+                </a>
+
+                <button class="mobile-menu__close" type="button" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+                <ul class="mobile-nav__list">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#safety">Safety</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu__contact">
+                <a href="tel:+18885550192">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>(888) 555-0192</span>
+                </a>
+                <a href="mailto:support@electrcian.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>support@electrcian.com</span>
+                </a>
+            </div>
+
+            <a href="#quote-form" class="btn btn--accent btn--full">Get Provider Quotes</a>
+        </div>
+    </aside>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="hero__bg"></div>
+            <div class="hero__overlay"></div>
+
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <span class="section-kicker section-kicker--accent">
+                        <i class="fa-solid fa-bolt"></i>
+                        Independent provider comparison
+                    </span>
+
+                    <h1 class="hero__title">
+                        Compare local electrical provider options with
+                        <span>clarity.</span>
+                    </h1>
+
+                    <p class="hero__text">
+                        Electrcian helps homeowners explore electrical service categories,
+                        compare provider options, and request quotes for repairs,
+                        upgrades, rewiring, lighting, and EV charger projects.
+                    </p>
+
+                    <div class="hero__buttons">
+                        <a href="#quote-form" class="btn btn--accent">
+                            <span>Compare Providers</span>
+                        </a>
+                        <a href="#services" class="btn btn--ghost">
+                            <span>View Services</span>
+                        </a>
+                    </div>
+
+                    <div class="hero__benefits">
+                        <div class="benefit-chip">
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span>100% free to use</span>
+                        </div>
+                        <div class="benefit-chip">
+                            <i class="fa-regular fa-shield-check"></i>
+                            <span>No obligation</span>
+                        </div>
+                        <div class="benefit-chip">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span>Independent providers</span>
+                        </div>
+                        <div class="benefit-chip">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <span>Compare with confidence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__form-card" id="quote-form">
+                    <div class="form-card">
+                        <div class="form-card__head">
+                            <h2>Start Your Comparison</h2>
+                            <p>It only takes about 60 seconds.</p>
+                        </div>
+
+                        <form class="quote-form">
+                            <div class="form-field">
+                                <label for="zipCode">ZIP Code</label>
+                                <div class="form-field__control">
+                                    <input type="text" id="zipCode" placeholder="Enter ZIP Code" />
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="projectType">Project Type</label>
+                                <div class="form-field__control">
+                                    <select id="projectType">
+                                        <option selected disabled>Select project type</option>
+                                        <option>Electrical Repair</option>
+                                        <option>Panel Upgrade</option>
+                                        <option>Wiring & Rewiring</option>
+                                        <option>Lighting Installation</option>
+                                        <option>Outlet & Switches</option>
+                                        <option>EV Charger Installation</option>
+                                        <option>Emergency Electrical</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="timeline">Timeline</label>
+                                <div class="form-field__control">
+                                    <select id="timeline">
+                                        <option selected disabled>How soon do you need it?</option>
+                                        <option>As soon as possible</option>
+                                        <option>This week</option>
+                                        <option>This month</option>
+                                        <option>Just exploring</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn--accent btn--full">
+                                <span>Find Providers</span>
+                            </button>
+
+                            <p class="form-card__meta">
+                                Secure • Private • No spam
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container hero-services">
+                <article class="hero-service-card">
+                    <div class="hero-service-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3>Electrical Repair</h3>
+                    <p>Outlets, switches, breakers, troubleshooting and more.</p>
+                    <a href="./services/electrical-repair.html">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="hero-service-card">
+                    <div class="hero-service-card__icon"><i class="fa-solid fa-table-columns"></i></div>
+                    <h3>Panel Upgrades</h3>
+                    <p>Panel replacement, capacity upgrades and safer systems.</p>
+                    <a href="./services/panel-upgrades.html">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="hero-service-card">
+                    <div class="hero-service-card__icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                    <h3>Wiring & Rewiring</h3>
+                    <p>New circuits, rewiring, remodel electrical updates.</p>
+                    <a href="./services/wiring-rewiring.html">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="hero-service-card">
+                    <div class="hero-service-card__icon"><i class="fa-solid fa-car-battery"></i></div>
+                    <h3>EV Charger Installation</h3>
+                    <p>Home EV charger setup, dedicated circuits and readiness.</p>
+                    <a href="./services/ev-charger-installation.html">Explore <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="services section section--light" id="services">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <span class="section-kicker">Popular electrical services</span>
+                    <h2>What do you need help with?</h2>
+                    <p>
+                        Browse common electrical service categories and compare local provider options
+                        based on your home, project type, and timeline.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h3>Electrical Repairs</h3>
+                        <p>Fix outlets, switches, breakers, flickering lights and similar issues.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <i class="fa-solid fa-table-columns"></i>
+                        <h3>Panel Upgrades</h3>
+                        <p>Improve panel capacity, modernize systems and support new loads.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <i class="fa-regular fa-lightbulb"></i>
+                        <h3>Lighting Installation</h3>
+                        <p>Indoor, outdoor and recessed lighting installation options.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <i class="fa-solid fa-toggle-on"></i>
+                        <h3>Outlets & Switches</h3>
+                        <p>Install or update outlets, dimmers, smart switches and controls.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <i class="fa-solid fa-car-side"></i>
+                        <h3>EV Charger Installation</h3>
+                        <p>Compare provider options for home EV charging solutions.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <i class="fa-solid fa-plug-circle-bolt"></i>
+                        <h3>Wiring & Rewiring</h3>
+                        <p>New wiring, full rewiring and electrical layout adjustments.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Surge Protection</h3>
+                        <p>Protect your home, appliances and devices with surge solutions.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <i class="fa-solid fa-fan"></i>
+                        <h3>Ceiling Fans</h3>
+                        <p>Installation and replacement for comfort and airflow improvement.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <i class="fa-solid fa-house-signal"></i>
+                        <h3>Smart Home Wiring</h3>
+                        <p>Compare options for connected switches, systems and smart upgrades.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <h3>Emergency Electrical</h3>
+                        <p>Urgent provider options for outages, burning smells and breaker issues.</p>
+                    </article>
+                </div>
+
+                <div class="section-actions section-actions--center">
+                    <a href="./services.html" class="btn btn--outline">
+                        <span>View All Services</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPARISON BAND -->
+        <section class="comparison-band section section--white">
+            <div class="container comparison-band__grid">
+                <article class="comparison-panel">
+                    <h3>Project Complexity Scale</h3>
+                    <div class="complexity-steps">
+                        <div class="complexity-step">
+                            <span class="complexity-step__dot"></span>
+                            <strong>Simple</strong>
+                            <p>Outlet replacement, switch updates, light fixture install.</p>
+                        </div>
+
+                        <div class="complexity-step">
+                            <span class="complexity-step__dot"></span>
+                            <strong>Medium</strong>
+                            <p>New circuits, outdoor lighting, partial wiring updates.</p>
+                        </div>
+
+                        <div class="complexity-step">
+                            <span class="complexity-step__dot"></span>
+                            <strong>Advanced</strong>
+                            <p>Panel upgrades, rewiring, EV charger installation.</p>
+                        </div>
+
+                        <div class="complexity-step">
+                            <span class="complexity-step__dot"></span>
+                            <strong>Urgent</strong>
+                            <p>Power loss, hot outlets, exposed wiring, burning smells.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="comparison-panel">
+                    <h3>Electrical Quote Clarity</h3>
+                    <ul class="check-list">
+                        <li>Labor scope</li>
+                        <li>Materials</li>
+                        <li>Panel / circuit notes</li>
+                        <li>Permit information</li>
+                        <li>Timeline</li>
+                        <li>Service call fee</li>
+                        <li>Warranty terms</li>
+                    </ul>
+                </article>
+
+                <article class="comparison-panel">
+                    <h3>How the Matching Path Works</h3>
+                    <ol class="steps-list">
+                        <li>Share your project details</li>
+                        <li>Compare provider options</li>
+                        <li>Review quotes</li>
+                        <li>Verify license and insurance</li>
+                        <li>Choose the right fit</li>
+                    </ol>
+                </article>
+
+                <aside class="comparison-reminder">
+                    <div class="comparison-reminder__icon">
+                        <i class="fa-solid fa-shield-bolt"></i>
+                    </div>
+                    <h3>Important Reminder</h3>
+                    <p>
+                        Providers are independent. Electrcian does not perform electrical work
+                        or guarantee any work performed.
+                    </p>
+                    <p>
+                        Always verify license, insurance, permits, and quote details before hiring.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- WHY COMPARE -->
+        <section class="why-compare section section--dark">
+            <div class="container">
+                <div class="section-heading section-heading--center section-heading--light">
+                    <span class="section-kicker">What matters when comparing electrical providers</span>
+                    <h2>One project. Multiple options.</h2>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <i class="fa-regular fa-id-card"></i>
+                        <h3>License & Insurance</h3>
+                        <p>Always verify current license and insurance coverage.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-regular fa-clipboard"></i>
+                        <h3>Permit Awareness</h3>
+                        <p>Some projects require permits and inspections.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        <h3>Quote Clarity</h3>
+                        <p>Compare scope, materials, fees and timeline details.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        <h3>Service Call Fee</h3>
+                        <p>Understand if there is a fee before work begins.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-regular fa-clock"></i>
+                        <h3>Timeline Fit</h3>
+                        <p>Make sure the schedule matches your project needs.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-regular fa-shield"></i>
+                        <h3>Warranty Terms</h3>
+                        <p>Compare warranty coverage and key terms.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>Local Availability</h3>
+                        <p>Provider availability can vary by city and ZIP code.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="how-it-works section section--dark-alt" id="how-it-works">
+            <div class="container how-it-works__grid">
+                <div class="how-it-works__visual">
+                    <div class="bulb-visual">
+                        <i class="fa-regular fa-lightbulb"></i>
+                    </div>
+                </div>
+
+                <div class="how-it-works__content">
+                    <span class="section-kicker">How it works</span>
+                    <h2>Find the right electrician in 3 simple steps</h2>
+
+                    <div class="how-steps">
+                        <article class="how-step">
+                            <span class="how-step__number">1</span>
+                            <h3>Tell us your needs</h3>
+                            <p>Answer a few questions about your project, location and timing.</p>
+                        </article>
+
+                        <article class="how-step">
+                            <span class="how-step__number">2</span>
+                            <h3>Compare providers</h3>
+                            <p>We match you with local electrical provider options to review.</p>
+                        </article>
+
+                        <article class="how-step">
+                            <span class="how-step__number">3</span>
+                            <h3>Choose with confidence</h3>
+                            <p>Contact your preferred provider and review quote details directly.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SAFETY -->
+        <section class="safety section section--light" id="safety">
+            <div class="container safety__grid">
+                <div class="safety__content">
+                    <span class="section-kicker">Electrical safety matters</span>
+                    <h2>Before you hire, check the essentials</h2>
+
+                    <ul class="safety-list">
+                        <li>Verify license and insurance</li>
+                        <li>Ask about warranties and guarantees</li>
+                        <li>Get a detailed written estimate</li>
+                        <li>Understand the full scope of work</li>
+                        <li>Confirm permit handling if required</li>
+                        <li>Check reviews and recent work</li>
+                    </ul>
+                </div>
+
+                <div class="safety__visual">
+                    <div class="safety-illustration-card">
+                        <div class="safety-illustration-card__badge">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Electrical Checklist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT TYPES -->
+        <section class="project-types section section--white">
+            <div class="container project-types__grid">
+                <div class="project-types__content">
+                    <span class="section-kicker">For every type of project</span>
+                    <h2>We help you find the right expert</h2>
+
+                    <div class="project-tabs">
+                        <button class="project-tab is-active" type="button">Residential</button>
+                        <button class="project-tab" type="button">Commercial</button>
+                        <button class="project-tab" type="button">Emergency</button>
+                        <button class="project-tab" type="button">Industrial</button>
+                    </div>
+
+                    <ul class="project-types__list">
+                        <li>Home wiring & rewiring</li>
+                        <li>Lighting installation</li>
+                        <li>Outlet & switch installation</li>
+                        <li>Panel upgrades</li>
+                        <li>EV charger installation</li>
+                        <li>Ceiling fan installation</li>
+                    </ul>
+
+                    <a href="#quote-form" class="btn btn--accent">
+                        <span>Get Matched</span>
+                    </a>
+                </div>
+
+                <div class="project-types__visual">
+                    <div class="project-home-card"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section class="reviews section section--light" id="reviews">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <span class="section-kicker">What homeowners are saying</span>
+                    <h2>Real reviews. Real experiences.</h2>
+                </div>
+
+                <div class="reviews-grid">
+                    <article class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p>
+                            Found a great electrician within minutes. The process was easy and saved me so much time.
+                        </p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">S</div>
+                            <div>
+                                <strong>Sarah M.</strong>
+                                <span>Austin, TX</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p>
+                            The matched electricians were professional and responded quickly. Highly recommended!
+                        </p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">J</div>
+                            <div>
+                                <strong>James R.</strong>
+                                <span>Dallas, TX</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p>
+                            I compared quotes and saved hundreds on my panel upgrade. Great service!
+                        </p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">L</div>
+                            <div>
+                                <strong>Linda K.</strong>
+                                <span>Houston, TX</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p>
+                            Excellent experience from start to finish. Will use again for future projects.
+                        </p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">M</div>
+                            <div>
+                                <strong>Mark D.</strong>
+                                <span>San Antonio, TX</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-actions section-actions--center">
+                    <a href="./reviews.html" class="btn btn--outline">
+                        <span>Read More Reviews</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-banner section">
+            <div class="container">
+                <div class="cta-banner__inner">
+                    <div class="cta-banner__content">
+                        <span class="section-kicker section-kicker--accent">Ready to get started?</span>
+                        <h2>Get matched with top electrical providers today</h2>
+                        <p>
+                            It’s free, fast and easy. Find the right provider for your project.
+                        </p>
+                    </div>
+
+                    <div class="cta-banner__actions">
+                        <a href="#quote-form" class="btn btn--accent">
+                            <span>Get Started Now</span>
+                        </a>
+                        <a href="./services.html" class="btn btn--ghost-light">
+                            <span>View All Services</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="footer">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <a href="./index.html" class="site-logo site-logo--footer">
+                <span class="site-logo__icon">
+                    <img src="./assets/icons/logo.svg" alt="" aria-hidden="true">
+                </span>
+                    <span class="site-logo__text">Electrcian</span>
+                </a>
+
+                <p class="footer__text">
+                    We help homeowners and businesses compare local electrical provider options
+                    for repairs, upgrades, rewiring, lighting, and EV charger projects.
+                </p>
+
+                <div class="footer__socials">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <h3>Quick Links</h3>
+                <ul class="footer__links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#safety">Safety Tips</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h3>For Providers</h3>
+                <ul class="footer__links">
+                    <li><a href="./join-network.html">Join Our Network</a></li>
+                    <li><a href="./provider-login.html">Provider Login</a></li>
+                    <li><a href="./resources.html">Resources</a></li>
+                    <li><a href="./support.html">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h3>Contact Us</h3>
+                <ul class="footer__contact">
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+18885550192">(888) 555-0192</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:support@electrcian.com">support@electrcian.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>129 Electric Ave, Suite 100, Austin, TX 78701</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer__bottom">
+            <p>© 2026 Electrcian. All rights reserved.</p>
+
+            <div class="footer__legal">
+                <a href="./privacy-policy.html">Privacy Policy</a>
+                <a href="./terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+<script src="./assets/js/config.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Electrical Services | Electrcian</title>
+    <meta name="description"
+        content="Review electrical service categories and compare independent local provider options." />
+
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+    <link rel="apple-touch-icon" href="./assets/icons/logo.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="page-services">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div class="container topbar__inner">
+            <p class="topbar__note">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                <span data-service-area>
+                    Independent electrical provider matching across selected areas in the United States
+                </span>
+            </p>
+
+            <div class="topbar__meta">
+                <a href="tel:+18885550192" class="topbar__link" data-phone-link>
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                    <span data-phone-text>(888) 555-0192</span>
+                </a>
+
+                <span class="topbar__divider" aria-hidden="true"></span>
+
+                <p class="topbar__location">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <span data-address-text>214 Market Street, Denver, CO 80202, USA</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header__inner">
+            <a href="./index.html" class="site-logo" aria-label="Electrcian home">
+                <span class="site-logo__icon">
+                    <img src="./assets/icons/logo.svg" alt="" aria-hidden="true" />
+                </span>
+                <span class="site-logo__text" data-company-name>Electrcian</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Primary navigation">
+                <ul class="main-nav__list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./services.html" class="is-active">Services</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:+18885550192" class="header__phone" data-phone-link>
+                    <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
+                    <span data-phone-text>(888) 555-0192</span>
+                </a>
+
+                <a href="./contact.html#contact-form" class="btn btn--accent">
+                    <span>Request Quotes</span>
+                </a>
+
+                <button class="burger" type="button" aria-label="Open menu" aria-controls="mobileMenu"
+                    aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true" data-mobile-menu>
+        <div class="mobile-menu__overlay"></div>
+
+        <div class="mobile-menu__panel">
+            <div class="mobile-menu__head">
+                <a href="./index.html" class="site-logo site-logo--mobile" aria-label="Electrcian home">
+                    <span class="site-logo__icon">
+                        <img src="./assets/icons/logo.svg" alt="" aria-hidden="true" />
+                    </span>
+                    <span class="site-logo__text" data-company-name>Electrcian</span>
+                </a>
+
+                <button class="mobile-menu__close" type="button" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+                <ul class="mobile-nav__list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu__services">
+                <p class="mobile-menu__label">Service categories</p>
+                <div class="mobile-menu__service-list" data-services-list="cards"></div>
+            </div>
+
+            <div class="mobile-menu__contact">
+                <a href="tel:+18885550192" data-phone-link>
+                    <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
+                    <span data-phone-text>(888) 555-0192</span>
+                </a>
+
+                <a href="mailto:hello@electrcian.com" data-email-link>
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <span data-email-text>hello@electrcian.com</span>
+                </a>
+            </div>
+
+            <p class="mobile-menu__notice" data-legal-notice>
+                Electrcian is an independent provider-matching platform and does not perform electrical work directly.
+            </p>
+
+            <a href="./contact.html#contact-form" class="btn btn--accent btn--full">
+                Request Provider Options
+            </a>
+        </div>
+    </aside>
+
+    <main id="main">
+        <!-- 1. SERVICES HERO -->
+        <section class="hero services-page-hero" id="services-hero" data-section="Services">
+            <div class="hero__bg"></div>
+            <div class="hero__overlay"></div>
+
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <span class="section-kicker section-kicker--accent">
+                        <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                        Electrical service categories
+                    </span>
+
+                    <h1 class="hero__title">
+                        Compare electrical service options before you choose.
+                    </h1>
+
+                    <p class="hero__text">
+                        {{companyName}} helps homeowners review electrical project categories,
+                        compare independent provider options, and prepare better quote questions
+                        for repair, panel, wiring, and EV charger projects.
+                    </p>
+
+                    <div class="hero__buttons">
+                        <a href="./contact.html#contact-form" class="btn btn--accent">
+                            <span>Compare Providers</span>
+                        </a>
+
+                        <a href="#service-grid" class="btn btn--ghost">
+                            <span>View Categories</span>
+                        </a>
+                    </div>
+
+                    <div class="hero__benefits">
+                        <div class="benefit-chip">
+                            <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+                            <span>Independent provider options</span>
+                        </div>
+
+                        <div class="benefit-chip">
+                            <i class="fa-solid fa-file-invoice" aria-hidden="true"></i>
+                            <span>Quote clarity support</span>
+                        </div>
+
+                        <div class="benefit-chip">
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                            <span>Verification reminders</span>
+                        </div>
+
+                        <div class="benefit-chip">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            <span>Availability may vary</span>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="form-card services-hero-card" aria-label="Provider comparison reminder">
+                    <div class="form-card__head">
+                        <h2>Compare by fit</h2>
+                        <p>
+                            Electrical projects can differ by scope, panel condition, permits,
+                            timeline, and provider availability.
+                        </p>
+                    </div>
+
+                    <ul class="check-list">
+                        <li>Review written quote details</li>
+                        <li>Ask about permit handling</li>
+                        <li>Compare service call fees</li>
+                        <li>Verify license and insurance</li>
+                        <li>Confirm warranty terms</li>
+                    </ul>
+
+                    <a href="./contact.html#contact-form" class="btn btn--accent btn--full">
+                        Start Comparison
+                    </a>
+                </aside>
+            </div>
+
+            <div class="container hero-services">
+                <article class="hero-service-card">
+                    <div class="hero-service-card__icon">
+                        <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+                    </div>
+                    <h3>Electrical Repair</h3>
+                    <p>Outlet issues, switches, flickering lights, tripped breakers.</p>
+                    <a href="./electrical-repair.html">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="hero-service-card">
+                    <div class="hero-service-card__icon">
+                        <i class="fa-solid fa-table-columns" aria-hidden="true"></i>
+                    </div>
+                    <h3>Panel Upgrades</h3>
+                    <p>Capacity needs, breaker panels, service upgrade questions.</p>
+                    <a href="./panel-upgrades.html">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="hero-service-card">
+                    <div class="hero-service-card__icon">
+                        <i class="fa-solid fa-plug-circle-bolt" aria-hidden="true"></i>
+                    </div>
+                    <h3>Wiring & Rewiring</h3>
+                    <p>New circuits, remodel wiring, outdated wiring questions.</p>
+                    <a href="./wiring-rewiring.html">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="hero-service-card">
+                    <div class="hero-service-card__icon">
+                        <i class="fa-solid fa-car-battery" aria-hidden="true"></i>
+                    </div>
+                    <h3>EV Charger Installation</h3>
+                    <p>Level 2 charger setup, dedicated circuits, panel readiness.</p>
+                    <a href="./ev-charger-installation.html">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 2. SERVICE GRID -->
+        <section class="services section section--light" id="service-grid" data-section="Categories">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <span class="section-kicker">Provider comparison categories</span>
+                    <h2>Choose the electrical service category that fits your project.</h2>
+                    <p>
+                        Each category helps you think through scope, materials, urgency,
+                        permits, and quote questions before comparing independent provider options.
+                    </p>
+                </div>
+
+                <div class="services-grid services-grid--four">
+                    <article class="service-card">
+                        <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+                        <h3>Electrical Repair</h3>
+                        <p>
+                            Compare providers for outlet issues, switches, flickering lights,
+                            breaker concerns, and power troubleshooting.
+                        </p>
+                        <a href="./electrical-repair.html" class="service-card__link">View repair options</a>
+                    </article>
+
+                    <article class="service-card">
+                        <i class="fa-solid fa-table-columns" aria-hidden="true"></i>
+                        <h3>Panel Upgrades</h3>
+                        <p>
+                            Review provider options for panel replacement, breaker panels,
+                            added circuits, and EV readiness.
+                        </p>
+                        <a href="./panel-upgrades.html" class="service-card__link">View panel options</a>
+                    </article>
+
+                    <article class="service-card">
+                        <i class="fa-solid fa-plug-circle-bolt" aria-hidden="true"></i>
+                        <h3>Wiring & Rewiring</h3>
+                        <p>
+                            Compare companies for new wiring, rewiring, remodel electrical
+                            updates, and circuit planning.
+                        </p>
+                        <a href="./wiring-rewiring.html" class="service-card__link">View wiring options</a>
+                    </article>
+
+                    <article class="service-card">
+                        <i class="fa-solid fa-car-battery" aria-hidden="true"></i>
+                        <h3>EV Charger Installation</h3>
+                        <p>
+                            Explore providers for Level 2 charger setup, dedicated circuits,
+                            panel readiness, and permit notes.
+                        </p>
+                        <a href="./ev-charger-installation.html" class="service-card__link">View EV charger options</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. ELECTRICAL OBJECT TABS -->
+        <section class="section section--white services-object-tabs" id="object-tabs" data-section="Tabs">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">Electrical needs tabs</span>
+                    <h2>Compare the project details behind common electrical objects.</h2>
+                    <p>
+                        These tabs help homeowners organize what to ask providers before
+                        requesting or reviewing quote options.
+                    </p>
+                </div>
+
+                <div class="tabs object-tabs">
+                    <div class="tabs__list" role="tablist" aria-label="Electrical object comparison tabs">
+                        <button class="tabs__button" type="button" role="tab" id="tab-charger" aria-selected="true"
+                            aria-controls="panel-charger">
+                            Charger
+                        </button>
+
+                        <button class="tabs__button" type="button" role="tab" id="tab-cord" aria-selected="false"
+                            aria-controls="panel-cord">
+                            Cord
+                        </button>
+
+                        <button class="tabs__button" type="button" role="tab" id="tab-wire" aria-selected="false"
+                            aria-controls="panel-wire">
+                            Wire
+                        </button>
+
+                        <button class="tabs__button" type="button" role="tab" id="tab-light" aria-selected="false"
+                            aria-controls="panel-light">
+                            Light Bulb
+                        </button>
+
+                        <button class="tabs__button" type="button" role="tab" id="tab-battery" aria-selected="false"
+                            aria-controls="panel-battery">
+                            Battery
+                        </button>
+
+                        <button class="tabs__button" type="button" role="tab" id="tab-panel" aria-selected="false"
+                            aria-controls="panel-panel">
+                            Panel
+                        </button>
+                    </div>
+
+                    <div class="tabs__panel object-tabs__panel is-active" id="panel-charger" role="tabpanel"
+                        aria-labelledby="tab-charger">
+                        <div class="object-tabs__grid">
+                            <div class="object-tabs__image object-tabs__image--charger"></div>
+                            <div class="object-tabs__content">
+                                <h3>EV charger project details</h3>
+                                <p>
+                                    EV charger projects may involve charger location, dedicated circuit planning,
+                                    panel capacity review, permit notes, and quote comparison.
+                                </p>
+                                <ul class="check-list">
+                                    <li>Panel capacity</li>
+                                    <li>Dedicated circuit needs</li>
+                                    <li>Charger location</li>
+                                    <li>Permit handling</li>
+                                    <li>Warranty terms</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs__panel object-tabs__panel" id="panel-cord" role="tabpanel"
+                        aria-labelledby="tab-cord" hidden>
+                        <div class="object-tabs__grid">
+                            <div class="object-tabs__image object-tabs__image--cord"></div>
+                            <div class="object-tabs__content">
+                                <h3>Cord, outlet, and load concerns</h3>
+                                <p>
+                                    Outlet and cord-related needs can involve load safety, outlet condition,
+                                    replacement scope, and provider diagnostic details.
+                                </p>
+                                <ul class="check-list">
+                                    <li>Outlet condition</li>
+                                    <li>Load requirements</li>
+                                    <li>Repair scope</li>
+                                    <li>Service call fee</li>
+                                    <li>Timeline</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs__panel object-tabs__panel" id="panel-wire" role="tabpanel"
+                        aria-labelledby="tab-wire" hidden>
+                        <div class="object-tabs__grid">
+                            <div class="object-tabs__image object-tabs__image--wire"></div>
+                            <div class="object-tabs__content">
+                                <h3>Wiring and rewiring context</h3>
+                                <p>
+                                    Wiring projects may involve access needs, circuit planning,
+                                    code considerations, materials, and inspection questions.
+                                </p>
+                                <ul class="check-list">
+                                    <li>Circuit planning</li>
+                                    <li>Material scope</li>
+                                    <li>Wall access</li>
+                                    <li>Permit notes</li>
+                                    <li>Warranty terms</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs__panel object-tabs__panel" id="panel-light" role="tabpanel"
+                        aria-labelledby="tab-light" hidden>
+                        <div class="object-tabs__grid">
+                            <div class="object-tabs__image object-tabs__image--light"></div>
+                            <div class="object-tabs__content">
+                                <h3>Lighting project comparison</h3>
+                                <p>
+                                    Lighting projects may include fixture type, indoor or outdoor location,
+                                    switch controls, dimmer compatibility, and timeline.
+                                </p>
+                                <ul class="check-list">
+                                    <li>Fixture type</li>
+                                    <li>Indoor or outdoor location</li>
+                                    <li>Switch controls</li>
+                                    <li>Timeline</li>
+                                    <li>Quote clarity</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs__panel object-tabs__panel" id="panel-battery" role="tabpanel"
+                        aria-labelledby="tab-battery" hidden>
+                        <div class="object-tabs__grid">
+                            <div class="object-tabs__image object-tabs__image--battery"></div>
+                            <div class="object-tabs__content">
+                                <h3>Power readiness and backup questions</h3>
+                                <p>
+                                    Power-related projects may require provider review of load needs,
+                                    circuit conditions, panel readiness, and safety details.
+                                </p>
+                                <ul class="check-list">
+                                    <li>Power load</li>
+                                    <li>Panel readiness</li>
+                                    <li>Circuit notes</li>
+                                    <li>Safety concerns</li>
+                                    <li>Provider availability</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs__panel object-tabs__panel" id="panel-panel" role="tabpanel"
+                        aria-labelledby="tab-panel" hidden>
+                        <div class="object-tabs__grid">
+                            <div class="object-tabs__image object-tabs__image--panel"></div>
+                            <div class="object-tabs__content">
+                                <h3>Panel and breaker considerations</h3>
+                                <p>
+                                    Panel-related projects can involve capacity, breaker layout,
+                                    permit notes, service upgrade questions, and warranty terms.
+                                </p>
+                                <ul class="check-list">
+                                    <li>Panel capacity</li>
+                                    <li>Breaker layout</li>
+                                    <li>Permit requirements</li>
+                                    <li>Upgrade scope</li>
+                                    <li>Warranty coverage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJECT COMPLEXITY SCALE -->
+        <section class="comparison-band section section--light" id="complexity-scale" data-section="Complexity">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <span class="section-kicker">Project complexity scale</span>
+                    <h2>Understand the project level before comparing quotes.</h2>
+                    <p>
+                        Electrical projects can shift quickly from simple to advanced depending
+                        on panel condition, wiring access, safety concerns, and local requirements.
+                    </p>
+                </div>
+
+                <article class="comparison-panel">
+                    <div class="complexity-steps">
+                        <div class="complexity-step">
+                            <span class="complexity-step__dot" aria-hidden="true"></span>
+                            <strong>Simple</strong>
+                            <p>Outlet replacement, switch updates, light fixture installation.</p>
+                        </div>
+
+                        <div class="complexity-step">
+                            <span class="complexity-step__dot" aria-hidden="true"></span>
+                            <strong>Medium</strong>
+                            <p>New circuits, outdoor lighting, smart home wiring.</p>
+                        </div>
+
+                        <div class="complexity-step">
+                            <span class="complexity-step__dot" aria-hidden="true"></span>
+                            <strong>Advanced</strong>
+                            <p>Panel upgrades, rewiring, EV charger installation.</p>
+                        </div>
+
+                        <div class="complexity-step">
+                            <span class="complexity-step__dot" aria-hidden="true"></span>
+                            <strong>Urgent</strong>
+                            <p>Power loss, burning smell, breaker failure, exposed wiring.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 5. QUOTE CLARITY CHECKLIST -->
+        <section class="section section--white quote-clarity-section" id="quote-clarity" data-section="Quote">
+            <div class="container comparison-band__grid">
+                <article class="comparison-panel">
+                    <span class="section-kicker">Electrical quote clarity</span>
+                    <h2 class="h2">A clear quote makes comparison easier.</h2>
+                    <p>
+                        Because {{companyName}} is a provider-matching platform, quote clarity matters.
+                        Homeowners should compare what each independent provider includes before
+                        choosing who to contact or hire directly.
+                    </p>
+                </article>
+
+                <article class="comparison-panel">
+                    <h3>A clear electrical quote may include:</h3>
+                    <ul class="check-list">
+                        <li>Labor scope</li>
+                        <li>Materials</li>
+                        <li>Panel / circuit notes</li>
+                        <li>Permit notes</li>
+                        <li>Timeline</li>
+                        <li>Service call fee</li>
+                        <li>Warranty terms</li>
+                    </ul>
+                </article>
+
+                <article class="comparison-panel">
+                    <h3>Questions worth asking</h3>
+                    <ol class="steps-list">
+                        <li>Is the quote written and itemized?</li>
+                        <li>Are permits or inspections needed?</li>
+                        <li>Is the service call fee included?</li>
+                        <li>What warranty terms apply?</li>
+                        <li>What timeline is realistic?</li>
+                    </ol>
+                </article>
+
+                <aside class="comparison-reminder">
+                    <div class="comparison-reminder__icon">
+                        <i class="fa-solid fa-shield-bolt" aria-hidden="true"></i>
+                    </div>
+                    <h3>Provider verification</h3>
+                    <p>
+                        {{companyName}} does not perform or supervise electrical work.
+                        Homeowners should verify license, insurance, permits, and quote details.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- 6. SERVICE SELECTION NOTES -->
+        <section class="why-compare section section--dark" id="selection-notes" data-section="Notes">
+            <div class="container">
+                <div class="section-heading section-heading--center section-heading--light">
+                    <span class="section-kicker">Service selection notes</span>
+                    <h2>Small project details can change the provider fit.</h2>
+                    <p>
+                        Electrical work can involve safety, code, permits, panel capacity,
+                        older wiring, and different provider availability by location.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                        <h3>Project type matters</h3>
+                        <p>Repair, panel, wiring, and EV charger projects need different quote details.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-table-columns" aria-hidden="true"></i>
+                        <h3>Panel condition matters</h3>
+                        <p>Panel capacity can affect circuits, EV charger needs, and upgrade scope.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+                        <h3>Permits may apply</h3>
+                        <p>Some projects may require permits or inspections depending on local rules.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-plug-circle-exclamation" aria-hidden="true"></i>
+                        <h3>Old wiring may need review</h3>
+                        <p>Older wiring may require closer inspection and a more detailed quote.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                        <h3>Timeline varies</h3>
+                        <p>Provider response times and project availability can vary by area.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        <h3>Verification is essential</h3>
+                        <p>Always verify license, insurance, permits, scope, and warranty terms.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <h3>Availability by ZIP</h3>
+                        <p>Provider options can vary by city, ZIP code, and project category.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FAQ + CTA -->
+        <section class="section section--light services-faq" id="services-faq" data-section="FAQ">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <span class="section-kicker">Electrical provider comparison FAQ</span>
+                    <h2>Helpful questions before you compare providers.</h2>
+                </div>
+
+                <div class="faq-list">
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            How do I compare local electrical providers?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Start by identifying your project type, urgency, location, and quote needs.
+                                Compare scope, materials, timeline, service call fees, warranty terms,
+                                and verification details before choosing a provider directly.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            Does Electrcian perform electrical work directly?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                No. Electrcian is an independent provider-matching platform. It does not
+                                perform, supervise, or guarantee electrical work.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            What should I ask before choosing an electrical provider?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Ask about license, insurance, permit handling, written quote details,
+                                service call fees, project timeline, materials, and warranty terms.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            Are provider responses guaranteed?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                No. Provider availability, pricing, service areas, and response times may
+                                vary by location, category, schedule, and project complexity.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-actions section-actions--center">
+                    <a href="./contact.html#contact-form" class="btn btn--accent">
+                        <span>Request Provider Options</span>
+                    </a>
+
+                    <a href="./about.html" class="btn btn--outline">
+                        <span>How Electrcian Works</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="cta-banner section" id="services-cta" data-section="CTA">
+            <div class="container">
+                <div class="cta-banner__inner">
+                    <div class="cta-banner__content">
+                        <span class="section-kicker section-kicker--accent">
+                            Ready to compare?
+                        </span>
+                        <h2>Request electrical provider options with more clarity.</h2>
+                        <p>
+                            Share your project details and compare independent provider options.
+                            Homeowners should verify license, insurance, permits, and quote details.
+                        </p>
+                    </div>
+
+                    <div class="cta-banner__actions">
+                        <a href="./contact.html#contact-form" class="btn btn--accent">
+                            <span>Start Comparison</span>
+                        </a>
+
+                        <a href="./about.html" class="btn btn--ghost-light">
+                            <span>Learn About The Platform</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="footer">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <a href="./index.html" class="site-logo site-logo--footer">
+                    <span class="site-logo__icon">
+                        <img src="./assets/icons/logo.svg" alt="" aria-hidden="true" />
+                    </span>
+                    <span class="site-logo__text" data-company-name>Electrcian</span>
+                </a>
+
+                <p class="footer__text" data-footer-text>
+                    Electrcian helps homeowners compare local electrical provider options for repair,
+                    panel, wiring, and EV charger projects. Providers are independent and availability
+                    may vary by location.
+                </p>
+
+                <p class="footer__text">
+                    Company ID:
+                    <strong data-company-id>ELC-USA-2048</strong>
+                </p>
+
+                <div class="footer__socials">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <h3>Navigation</h3>
+                <ul class="footer__links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h3>Services</h3>
+                <ul class="footer__links">
+                    <li><a href="./electrical-repair.html">Electrical Repair</a></li>
+                    <li><a href="./panel-upgrades.html">Panel Upgrades</a></li>
+                    <li><a href="./wiring-rewiring.html">Wiring & Rewiring</a></li>
+                    <li><a href="./ev-charger-installation.html">EV Charger Installation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h3>Contact</h3>
+                <ul class="footer__contact">
+                    <li>
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        <a href="tel:+18885550192" data-phone-link data-phone-text>
+                            (888) 555-0192
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:hello@electrcian.com" data-email-link data-email-text>
+                            hello@electrcian.com
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <span data-address-text>214 Market Street, Denver, CO 80202, USA</span>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                        <span data-service-area>
+                            Independent electrical provider matching across selected areas in the United States
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer__bottom">
+            <p>© 2026 <span data-company-name>Electrcian</span>. All rights reserved.</p>
+
+            <div class="footer__legal">
+                <a href="./privacy-policy.html">Privacy Policy</a>
+                <a href="./cookie-policy.html">Cookie Policy</a>
+                <a href="./terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
+
+        <div class="container footer__disclaimer">
+            <p data-disclaimer>
+                Disclaimer: This site is a free service to assist homeowners in connecting with local service providers.
+                All contractors/providers are independent and this site does not warrant or guarantee any work
+                performed.
+                It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary
+                license and insurance required for the work being performed. All persons depicted in a photo or video
+                are
+                actors or models and not contractors listed on this site.
+            </p>
+        </div>
+    </footer>
+
+<script src="./assets/js/config.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/services.js"></script>
+</body>
+
+</html>

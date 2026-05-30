@@ -1,0 +1,652 @@
+/* =========================================================
+   ELECTRCIAN — SERVICES PAGE
+   assets/css/services.css
+   ========================================================= */
+
+/* =========================
+   1. LOGO IMAGE SUPPORT
+   ========================= */
+
+.site-logo__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px rgba(255, 210, 26, 0.34));
+}
+
+.site-logo__icon::before {
+    display: none;
+}
+
+/* =========================
+   2. DESKTOP SERVICES DROPDOWN
+   ========================= */
+
+.nav-item--services {
+    position: relative;
+}
+
+.services-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    width: min(680px, calc(100vw - 40px));
+    transform: translateX(-50%);
+    z-index: 90;
+}
+
+.services-dropdown[hidden] {
+    display: none;
+}
+
+.services-dropdown::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -16px;
+    height: 18px;
+}
+
+.services-dropdown__inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 14px;
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-md);
+    background:
+        radial-gradient(circle at 12% 0%, rgba(255, 210, 26, 0.08), transparent 32%),
+        radial-gradient(circle at 90% 12%, rgba(241, 90, 36, 0.14), transparent 34%),
+        rgba(11, 13, 15, 0.94);
+    box-shadow: var(--shadow-dark-card);
+    backdrop-filter: blur(18px);
+}
+
+.services-dropdown__item {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+    align-items: start;
+    min-height: 92px;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.035);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.services-dropdown__item:hover,
+.services-dropdown__item:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(255, 210, 26, 0.28);
+    background: rgba(255, 255, 255, 0.065);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
+}
+
+.services-dropdown__icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    color: var(--color-accent-orange);
+    border: 1px solid rgba(241, 90, 36, 0.24);
+    border-radius: var(--radius-xs);
+    background: rgba(241, 90, 36, 0.08);
+}
+
+.services-dropdown__item:hover .services-dropdown__icon {
+    color: var(--color-accent-yellow);
+    border-color: rgba(255, 210, 26, 0.32);
+    background: rgba(255, 210, 26, 0.08);
+    filter: drop-shadow(0 0 12px rgba(255, 210, 26, 0.24));
+}
+
+.services-dropdown__content strong {
+    display: block;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.services-dropdown__content small {
+    display: block;
+    margin-top: 5px;
+    color: var(--color-text-muted-light);
+    font-size: 0.76rem;
+    line-height: 1.45;
+}
+
+/* =========================
+   3. MOBILE SERVICES LIST
+   ========================= */
+
+.mobile-menu__services {
+    margin-bottom: 18px;
+}
+
+.mobile-menu__label {
+    margin-bottom: 10px;
+    color: var(--color-accent-yellow);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.mobile-menu__service-list {
+    display: grid;
+    gap: 8px;
+    max-height: 260px;
+    overflow-y: auto;
+    padding-right: 2px;
+}
+
+.service-link-item {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-light);
+    background: rgba(255, 255, 255, 0.035);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base);
+}
+
+.service-link-item:hover {
+    transform: translateX(4px);
+    border-color: rgba(255, 210, 26, 0.28);
+    background: rgba(255, 210, 26, 0.06);
+}
+
+.service-link-item__icon {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    color: var(--color-accent-orange);
+    border: 1px solid rgba(241, 90, 36, 0.22);
+    border-radius: var(--radius-xs);
+    background: rgba(241, 90, 36, 0.08);
+}
+
+.service-link-item__content strong {
+    display: block;
+    font-size: 0.84rem;
+    line-height: 1.15;
+}
+
+.service-link-item__content small {
+    display: block;
+    margin-top: 4px;
+    color: var(--color-text-muted-light);
+    font-size: 0.72rem;
+    line-height: 1.35;
+}
+
+.mobile-menu__notice {
+    margin-bottom: 16px;
+    padding: 12px;
+    color: var(--color-text-soft-light);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.035);
+    font-size: 0.76rem;
+    line-height: 1.5;
+}
+
+/* =========================
+   4. SERVICES PAGE HERO
+   ========================= */
+
+.page-services .services-page-hero .hero__bg {
+    background:
+        linear-gradient(90deg, rgba(11, 13, 15, 0.96) 0%, rgba(11, 13, 15, 0.82) 46%, rgba(11, 13, 15, 0.58) 100%),
+        url("../images/services-hero.jpg") center / cover no-repeat,
+        radial-gradient(circle at 78% 22%, rgba(241, 90, 36, 0.18), transparent 32%),
+        linear-gradient(135deg, #0B0D0F, #1D2227);
+}
+
+.services-hero-card {
+    align-self: center;
+}
+
+.services-hero-card .check-list {
+    margin-bottom: 22px;
+}
+
+.services-hero-card .check-list li {
+    color: var(--color-text-muted-light);
+}
+
+/* =========================
+   5. SERVICE GRID PAGE VARIANT
+   ========================= */
+
+.services-grid--four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.services-grid--four .service-card {
+    min-height: 340px;
+    aspect-ratio: 1 / 1.06;
+}
+
+.services-grid--four .service-card:nth-child(1)::before {
+    background:
+        linear-gradient(180deg, rgba(11, 13, 15, 0.08), rgba(11, 13, 15, 0.92)),
+        url("../images/electrical-repair.jpg") center / cover no-repeat;
+}
+
+.services-grid--four .service-card:nth-child(2)::before {
+    background:
+        linear-gradient(180deg, rgba(11, 13, 15, 0.08), rgba(11, 13, 15, 0.92)),
+        url("../images/panel-upgrades.jpg") center / cover no-repeat;
+}
+
+.services-grid--four .service-card:nth-child(3)::before {
+    background:
+        linear-gradient(180deg, rgba(11, 13, 15, 0.08), rgba(11, 13, 15, 0.92)),
+        url("../images/wiring-rewiring.jpg") center / cover no-repeat;
+}
+
+.services-grid--four .service-card:nth-child(4)::before {
+    background:
+        linear-gradient(180deg, rgba(11, 13, 15, 0.08), rgba(11, 13, 15, 0.92)),
+        url("../images/ev-charger.jpg") center / cover no-repeat;
+}
+
+.service-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: max-content;
+    margin-top: 18px;
+    color: var(--color-accent-yellow);
+    font-size: 0.82rem;
+    font-weight: 900;
+    transition: color var(--transition-base), transform var(--transition-base);
+}
+
+.service-card__link::after {
+    content: "→";
+    transition: transform var(--transition-base);
+}
+
+.service-card__link:hover {
+    color: var(--color-accent-yellow-hover);
+    transform: translateX(2px);
+}
+
+.service-card__link:hover::after {
+    transform: translateX(4px);
+}
+
+/* =========================
+   6. OBJECT TABS
+   ========================= */
+
+.services-object-tabs {
+    overflow: hidden;
+}
+
+.object-tabs {
+    position: relative;
+}
+
+.object-tabs::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    z-index: 0;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 210, 26, 0.45),
+            rgba(241, 90, 36, 0.35),
+            transparent);
+    pointer-events: none;
+}
+
+.object-tabs .tabs__list {
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    background:
+        radial-gradient(circle at 10% 0%, rgba(255, 210, 26, 0.12), transparent 28%),
+        var(--color-bg-white);
+    box-shadow: 0 18px 46px rgba(17, 20, 23, 0.06);
+}
+
+.object-tabs__panel {
+    margin-top: 24px;
+}
+
+.object-tabs__grid {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 22px;
+    align-items: stretch;
+}
+
+.object-tabs__image {
+    position: relative;
+    min-height: 430px;
+    overflow: hidden;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(180deg, rgba(11, 13, 15, 0.06), rgba(11, 13, 15, 0.54)),
+        var(--color-bg-card);
+    box-shadow: 0 22px 58px rgba(17, 20, 23, 0.12);
+}
+
+.object-tabs__image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform var(--transition-slow);
+}
+
+.object-tabs__image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 72% 22%, rgba(255, 210, 26, 0.16), transparent 26%),
+        linear-gradient(180deg, rgba(11, 13, 15, 0.04), rgba(11, 13, 15, 0.5));
+}
+
+.object-tabs__panel:hover .object-tabs__image::before {
+    transform: scale(1.045);
+}
+
+.object-tabs__image--charger::before {
+    background-image: url("../images/ev-charger.jpg");
+}
+
+.object-tabs__image--cord::before {
+    background-image: url("../images/electrical-tools.jpg");
+}
+
+.object-tabs__image--wire::before {
+    background-image: url("../images/wiring-rewiring.jpg");
+}
+
+.object-tabs__image--light::before {
+    background-image: url("../images/lighting-detail.jpg");
+}
+
+.object-tabs__image--battery::before {
+    background-image: url("../images/quote-clarity.jpg");
+}
+
+.object-tabs__image--panel::before {
+    background-image: url("../images/breaker-panel.jpg");
+}
+
+.object-tabs__content {
+    position: relative;
+    min-height: 430px;
+    padding: clamp(24px, 4vw, 38px);
+    overflow: hidden;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(circle at 86% 0%, rgba(241, 90, 36, 0.09), transparent 28%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(247, 246, 243, 0.92));
+    box-shadow: 0 22px 58px rgba(17, 20, 23, 0.08);
+}
+
+.object-tabs__content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 28px;
+    right: 28px;
+    height: 2px;
+    background: linear-gradient(90deg,
+            transparent,
+            var(--color-accent-orange),
+            var(--color-accent-yellow),
+            transparent);
+}
+
+.object-tabs__content h3 {
+    max-width: 420px;
+    color: var(--color-text-dark);
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.object-tabs__content p {
+    margin-top: 16px;
+    color: var(--color-text-muted);
+}
+
+.object-tabs__content .check-list {
+    margin-top: 24px;
+}
+
+/* =========================
+   7. QUOTE CLARITY SECTION
+   ========================= */
+
+.quote-clarity-section .comparison-band__grid {
+    grid-template-columns: 1.15fr 0.8fr 0.86fr 0.72fr;
+}
+
+.quote-clarity-section .comparison-panel:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote-clarity-section .comparison-panel:first-child p {
+    margin-top: 16px;
+    color: var(--color-text-muted);
+}
+
+.quote-clarity-section .comparison-panel h2 {
+    color: var(--color-text-dark);
+}
+
+/* =========================
+   8. SERVICES FAQ
+   ========================= */
+
+.services-faq .faq-list {
+    max-width: 880px;
+    margin-inline: auto;
+}
+
+.services-faq .faq-item {
+    box-shadow: 0 14px 36px rgba(17, 20, 23, 0.06);
+}
+
+.services-faq .faq-question {
+    font-size: 0.98rem;
+}
+
+.services-faq .faq-answer p {
+    margin: 0;
+}
+
+/* =========================
+   9. FOOTER DISCLAIMER
+   ========================= */
+
+.footer__disclaimer {
+    padding: 0 0 26px;
+}
+
+.footer__disclaimer p {
+    padding: 18px;
+    color: var(--color-text-soft-light);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+
+/* =========================
+   10. FORM STATUS / VALIDATION
+   ========================= */
+
+.form-status {
+    margin-top: 4px;
+    padding: 12px 14px;
+    border-radius: var(--radius-xs);
+    font-size: 0.86rem;
+    font-weight: 800;
+}
+
+.form-status.is-success {
+    color: #173B25;
+    background: rgba(77, 190, 117, 0.16);
+    border: 1px solid rgba(77, 190, 117, 0.34);
+}
+
+.form-status.is-error {
+    color: #5D1D12;
+    background: rgba(241, 90, 36, 0.14);
+    border: 1px solid rgba(241, 90, 36, 0.32);
+}
+
+.is-invalid {
+    border-color: var(--color-accent-orange) !important;
+    box-shadow: 0 0 0 4px rgba(241, 90, 36, 0.12) !important;
+}
+
+/* =========================
+   11. REVEAL ANIMATION
+   ========================= */
+
+.reveal-item {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity 620ms ease,
+        transform 620ms ease;
+}
+
+.reveal-item.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   12. RESPONSIVE
+   ========================= */
+
+@media (max-width: 1280px) {
+    .quote-clarity-section .comparison-band__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1080px) {
+    .services-grid--four {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-grid--four .service-card {
+        min-height: 300px;
+    }
+
+    .object-tabs__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .object-tabs__image,
+    .object-tabs__content {
+        min-height: 340px;
+    }
+
+    .services-dropdown {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    .services-grid--four {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid--four .service-card {
+        min-height: 260px;
+        aspect-ratio: auto;
+    }
+
+    .object-tabs::before {
+        display: none;
+    }
+
+    .object-tabs .tabs__list {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        border-radius: var(--radius-sm);
+        scroll-snap-type: x mandatory;
+    }
+
+    .object-tabs .tabs__button {
+        scroll-snap-align: start;
+    }
+
+    .object-tabs__image,
+    .object-tabs__content {
+        min-height: 290px;
+    }
+
+    .object-tabs__content h3 {
+        font-size: clamp(2rem, 12vw, 2.7rem);
+    }
+
+    .quote-clarity-section .comparison-band__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__disclaimer p {
+        font-size: 0.72rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid--four .service-card {
+        min-height: 240px;
+    }
+
+    .object-tabs__image {
+        min-height: 240px;
+    }
+
+    .object-tabs__content {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .mobile-menu__service-list {
+        max-height: 220px;
+    }
+}

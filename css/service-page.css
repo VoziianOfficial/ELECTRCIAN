@@ -1,0 +1,925 @@
+/* =========================================================
+   ELECTRCIAN — SERVICE PAGES
+   assets/css/service-page.css
+   Shared styles for all 4 service pages
+   ========================================================= */
+
+/* =========================
+   1. SERVICE HERO
+   ========================= */
+
+.service-hero {
+    position: relative;
+    min-height: 640px;
+    padding: clamp(72px, 8vw, 112px) 0 clamp(54px, 7vw, 86px);
+    color: var(--color-text-light);
+    overflow: hidden;
+    background: var(--color-bg-dark);
+}
+
+.service-hero__bg,
+.service-hero__overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.service-hero__bg {
+    transform: scale(1.02);
+    background:
+        linear-gradient(90deg, rgba(11, 13, 15, 0.96) 0%, rgba(11, 13, 15, 0.82) 48%, rgba(11, 13, 15, 0.58) 100%),
+        url("../images/electrical-repair.jpg") center / cover no-repeat,
+        linear-gradient(135deg, #0B0D0F, #1D2227);
+}
+
+.service-hero--repair .service-hero__bg {
+    background:
+        linear-gradient(90deg, rgba(11, 13, 15, 0.96) 0%, rgba(11, 13, 15, 0.82) 48%, rgba(11, 13, 15, 0.58) 100%),
+        url("../images/electrical-repair.jpg") center / cover no-repeat,
+        linear-gradient(135deg, #0B0D0F, #1D2227);
+}
+
+.service-hero--panel .service-hero__bg {
+    background:
+        linear-gradient(90deg, rgba(11, 13, 15, 0.96) 0%, rgba(11, 13, 15, 0.82) 48%, rgba(11, 13, 15, 0.58) 100%),
+        url("../images/panel-upgrades.jpg") center / cover no-repeat,
+        linear-gradient(135deg, #0B0D0F, #1D2227);
+}
+
+.service-hero--wiring .service-hero__bg {
+    background:
+        linear-gradient(90deg, rgba(11, 13, 15, 0.96) 0%, rgba(11, 13, 15, 0.82) 48%, rgba(11, 13, 15, 0.58) 100%),
+        url("../images/wiring-rewiring.jpg") center / cover no-repeat,
+        linear-gradient(135deg, #0B0D0F, #1D2227);
+}
+
+.service-hero--ev .service-hero__bg {
+    background:
+        linear-gradient(90deg, rgba(11, 13, 15, 0.96) 0%, rgba(11, 13, 15, 0.82) 48%, rgba(11, 13, 15, 0.58) 100%),
+        url("../images/ev-charger.jpg") center / cover no-repeat,
+        linear-gradient(135deg, #0B0D0F, #1D2227);
+}
+
+.service-hero__overlay {
+    background:
+        radial-gradient(circle at 18% 18%, rgba(255, 210, 26, 0.1), transparent 24%),
+        radial-gradient(circle at 80% 36%, rgba(241, 90, 36, 0.2), transparent 32%),
+        linear-gradient(180deg, rgba(11, 13, 15, 0.08), rgba(11, 13, 15, 0.94));
+    pointer-events: none;
+}
+
+.service-hero__grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.46fr);
+    gap: clamp(34px, 6vw, 84px);
+    align-items: center;
+}
+
+.service-hero__content {
+    max-width: 820px;
+}
+
+.service-hero__content h1 {
+    max-width: 820px;
+    color: var(--color-text-light);
+    font-family: var(--font-heading);
+    font-size: clamp(3.35rem, 8vw, 6.8rem);
+    line-height: 0.86;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.service-hero__content p {
+    max-width: 680px;
+    margin-top: 24px;
+    color: var(--color-text-muted-light);
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+}
+
+.service-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.service-hero__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.service-hero__chips a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 0 14px;
+    color: var(--color-text-muted-light);
+    border: 1px solid var(--color-border-dark);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 0.78rem;
+    font-weight: 900;
+    transition:
+        color var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base),
+        transform var(--transition-base);
+}
+
+.service-hero__chips a:hover {
+    transform: translateY(-2px);
+    color: var(--color-bg-dark);
+    border-color: var(--color-accent-yellow);
+    background: var(--color-accent-yellow);
+    box-shadow: var(--shadow-yellow-glow);
+}
+
+.service-hero__card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(22px, 3vw, 32px);
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-md);
+    background:
+        radial-gradient(circle at 90% 0%, rgba(255, 210, 26, 0.12), transparent 30%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+    box-shadow: var(--shadow-dark-card);
+    backdrop-filter: blur(16px);
+}
+
+.service-hero__card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 26px;
+    right: 26px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-accent-orange), var(--color-accent-yellow), transparent);
+}
+
+.service-hero__card-icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 22px;
+    color: var(--color-bg-dark);
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, var(--color-accent-yellow), var(--color-accent-orange));
+    box-shadow: var(--shadow-yellow-glow);
+}
+
+.service-hero__card h2 {
+    margin-bottom: 18px;
+    font-family: var(--font-heading);
+    font-size: clamp(1.9rem, 3vw, 2.55rem);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.service-hero__card ul {
+    display: grid;
+    gap: 12px;
+}
+
+.service-hero__card li {
+    position: relative;
+    padding-left: 24px;
+    color: var(--color-text-muted-light);
+    font-size: 0.9rem;
+}
+
+.service-hero__card li::before {
+    content: "⚡";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-accent-yellow);
+}
+
+/* =========================
+   2. SERVICE OVERVIEW
+   ========================= */
+
+.service-overview {
+    overflow: hidden;
+}
+
+.service-overview__grid {
+    display: grid;
+    grid-template-columns: 0.94fr 1.06fr;
+    gap: clamp(34px, 6vw, 78px);
+    align-items: center;
+}
+
+.service-overview__content h2 {
+    max-width: 720px;
+    color: var(--color-text-dark);
+    font-family: var(--font-heading);
+    font-size: clamp(2.35rem, 5vw, 4.35rem);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.service-overview__content p {
+    margin-top: 18px;
+    color: var(--color-text-muted);
+}
+
+.service-overview__notice {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    gap: 14px;
+    margin-top: 28px;
+    padding: 18px;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    background:
+        radial-gradient(circle at 0% 0%, rgba(255, 210, 26, 0.12), transparent 30%),
+        var(--color-bg-white);
+    box-shadow: 0 18px 46px rgba(17, 20, 23, 0.07);
+}
+
+.service-overview__notice i {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    color: var(--color-bg-dark);
+    border-radius: var(--radius-xs);
+    background: linear-gradient(135deg, var(--color-accent-yellow), var(--color-accent-orange));
+    box-shadow: var(--shadow-yellow-glow);
+}
+
+.service-overview__notice p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.service-overview__visual {
+    position: relative;
+    min-height: 520px;
+}
+
+.service-overview__image {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(180deg, rgba(11, 13, 15, 0.06), rgba(11, 13, 15, 0.68)),
+        url("../images/electrical-repair.jpg") center / cover no-repeat;
+    box-shadow: 0 26px 70px rgba(17, 20, 23, 0.14);
+}
+
+.service-overview__image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 78% 18%, rgba(255, 210, 26, 0.16), transparent 28%),
+        linear-gradient(90deg, rgba(11, 13, 15, 0.12), rgba(11, 13, 15, 0.6));
+}
+
+.service-overview__image--repair {
+    background:
+        linear-gradient(180deg, rgba(11, 13, 15, 0.06), rgba(11, 13, 15, 0.68)),
+        url("../images/electrical-repair.jpg") center / cover no-repeat;
+}
+
+.service-overview__image--panel {
+    background:
+        linear-gradient(180deg, rgba(11, 13, 15, 0.06), rgba(11, 13, 15, 0.68)),
+        url("../images/panel-upgrades.jpg") center / cover no-repeat;
+}
+
+.service-overview__image--wiring {
+    background:
+        linear-gradient(180deg, rgba(11, 13, 15, 0.06), rgba(11, 13, 15, 0.68)),
+        url("../images/wiring-rewiring.jpg") center / cover no-repeat;
+}
+
+.service-overview__image--ev {
+    background:
+        linear-gradient(180deg, rgba(11, 13, 15, 0.06), rgba(11, 13, 15, 0.68)),
+        url("../images/ev-charger.jpg") center / cover no-repeat;
+}
+
+.service-overview__floating-card {
+    position: absolute;
+    left: -26px;
+    bottom: 34px;
+    display: grid;
+    gap: 6px;
+    width: min(420px, calc(100% - 26px));
+    padding: 18px;
+    color: var(--color-text-light);
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-md);
+    background:
+        radial-gradient(circle at 0% 0%, rgba(255, 210, 26, 0.12), transparent 30%),
+        rgba(11, 13, 15, 0.92);
+    box-shadow: var(--shadow-dark-card);
+    backdrop-filter: blur(16px);
+}
+
+.service-overview__floating-card strong {
+    color: var(--color-accent-yellow);
+    font-size: 0.92rem;
+}
+
+.service-overview__floating-card span {
+    color: var(--color-text-muted-light);
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+/* =========================
+   3. COMPARE GRID
+   ========================= */
+
+.service-compare-grid {
+    overflow: hidden;
+}
+
+.service-compare-grid__items {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.service-compare-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 176px;
+    padding: 22px 16px;
+    text-align: center;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-sm);
+    background:
+        radial-gradient(circle at 86% 0%, rgba(255, 210, 26, 0.1), transparent 28%),
+        var(--color-bg-white);
+    box-shadow: 0 18px 46px rgba(17, 20, 23, 0.06);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.service-compare-card::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-accent-orange), var(--color-accent-yellow), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.service-compare-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 210, 26, 0.34);
+    box-shadow: 0 24px 62px rgba(17, 20, 23, 0.12);
+}
+
+.service-compare-card:hover::before {
+    opacity: 1;
+}
+
+.service-compare-card i {
+    margin-bottom: 16px;
+    color: var(--color-accent-orange);
+    font-size: 1.42rem;
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base),
+        filter var(--transition-base);
+}
+
+.service-compare-card:hover i {
+    transform: rotate(-4deg) scale(1.04);
+    color: var(--color-accent-yellow-deep);
+    filter: drop-shadow(0 0 12px rgba(255, 210, 26, 0.26));
+}
+
+.service-compare-card h3 {
+    color: var(--color-text-dark);
+    font-size: 0.96rem;
+    line-height: 1.25;
+}
+
+.service-compare-card p {
+    margin-top: 8px;
+    color: var(--color-text-muted);
+    font-size: 0.76rem;
+    line-height: 1.5;
+}
+
+/* =========================
+   4. SERVICE TABS
+   ========================= */
+
+.service-tabs {
+    overflow: hidden;
+}
+
+.service-tabs .section-heading {
+    max-width: 820px;
+}
+
+.service-tabs .object-tabs__content {
+    background:
+        radial-gradient(circle at 86% 0%, rgba(255, 210, 26, 0.12), transparent 30%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 246, 243, 0.94));
+}
+
+/* =========================
+   5. PROJECT COMPLEXITY / FIT
+   ========================= */
+
+.service-fit-section {
+    overflow: hidden;
+}
+
+.service-fit-scale {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.service-fit-scale::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    left: 7%;
+    right: 7%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-accent-yellow), var(--color-accent-orange), rgba(255, 210, 26, 0.08));
+    box-shadow: var(--shadow-yellow-glow);
+}
+
+.service-fit-card {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 250px;
+    padding: 24px;
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-md);
+    background:
+        radial-gradient(circle at 86% 0%, rgba(255, 210, 26, 0.08), transparent 28%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025));
+    box-shadow: 0 18px 46px rgba(0, 0, 0, 0.18);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        background var(--transition-base);
+}
+
+.service-fit-card::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 28px;
+    width: 16px;
+    height: 16px;
+    border: 3px solid var(--color-bg-dark);
+    border-radius: 50%;
+    background: var(--color-accent-yellow);
+    box-shadow: var(--shadow-yellow-glow);
+}
+
+.service-fit-card::after {
+    content: "";
+    position: absolute;
+    left: -70%;
+    top: 0;
+    width: 58%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-accent-yellow), var(--color-accent-orange), transparent);
+    transition: left 680ms ease;
+}
+
+.service-fit-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 210, 26, 0.34);
+    background: rgba(255, 255, 255, 0.055);
+    box-shadow: var(--shadow-dark-card);
+}
+
+.service-fit-card:hover::after {
+    left: 120%;
+}
+
+.service-fit-card span {
+    display: inline-flex;
+    margin-bottom: 74px;
+    color: var(--color-accent-yellow);
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    line-height: 1;
+    letter-spacing: 0.06em;
+}
+
+.service-fit-card h3 {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.service-fit-card p {
+    margin-top: 10px;
+    color: var(--color-text-muted-light);
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+.service-fit-card--urgent {
+    border-color: rgba(241, 90, 36, 0.42);
+    background:
+        radial-gradient(circle at 86% 0%, rgba(241, 90, 36, 0.18), transparent 30%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.03));
+}
+
+.service-fit-card--urgent::before {
+    background: var(--color-accent-orange);
+    box-shadow: var(--shadow-orange-glow);
+}
+
+/* =========================
+   6. SERVICE FAQ
+   ========================= */
+
+.service-faq .faq-list {
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.service-faq .faq-item {
+    box-shadow: 0 14px 36px rgba(17, 20, 23, 0.06);
+}
+
+.service-faq .faq-answer p {
+    margin: 0;
+}
+
+/* =========================
+   7. FINAL CTA
+   ========================= */
+
+.service-final-cta {
+    background:
+        linear-gradient(90deg, rgba(11, 13, 15, 0.94), rgba(11, 13, 15, 0.66)),
+        url("../images/lighting-detail.jpg") center / cover no-repeat,
+        var(--color-bg-dark);
+}
+
+.page-panel-upgrades .service-final-cta {
+    background:
+        linear-gradient(90deg, rgba(11, 13, 15, 0.94), rgba(11, 13, 15, 0.66)),
+        url("../images/breaker-panel.jpg") center / cover no-repeat,
+        var(--color-bg-dark);
+}
+
+.page-wiring-rewiring .service-final-cta {
+    background:
+        linear-gradient(90deg, rgba(11, 13, 15, 0.94), rgba(11, 13, 15, 0.66)),
+        url("../images/home-wiring.jpg") center / cover no-repeat,
+        var(--color-bg-dark);
+}
+
+.page-ev-charger-installation .service-final-cta {
+    background:
+        linear-gradient(90deg, rgba(11, 13, 15, 0.94), rgba(11, 13, 15, 0.66)),
+        url("../images/ev-charger.jpg") center / cover no-repeat,
+        var(--color-bg-dark);
+}
+
+/* =========================
+   8. RESPONSIVE
+   ========================= */
+
+@media (max-width: 1280px) {
+    .service-compare-grid__items {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1080px) {
+    .service-hero {
+        min-height: auto;
+    }
+
+    .service-hero__grid,
+    .service-overview__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-hero__card {
+        max-width: 620px;
+    }
+
+    .service-overview__visual {
+        min-height: 430px;
+    }
+
+    .service-fit-scale {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-fit-scale::before {
+        display: none;
+    }
+
+    .service-fit-card span {
+        margin-bottom: 38px;
+    }
+}
+
+@media (max-width: 760px) {
+    .service-hero {
+        padding: 56px 0 46px;
+    }
+
+    .service-hero__content h1 {
+        font-size: clamp(3rem, 15vw, 4.35rem);
+    }
+
+    .service-hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .service-hero__chips a {
+        min-height: 36px;
+    }
+
+    .service-overview__visual {
+        min-height: auto;
+    }
+
+    .service-overview__image {
+        position: relative;
+        min-height: 320px;
+    }
+
+    .service-overview__floating-card {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    .service-overview__notice {
+        grid-template-columns: 1fr;
+    }
+
+    .service-compare-grid__items,
+    .service-fit-scale {
+        grid-template-columns: 1fr;
+    }
+
+    .service-compare-card {
+        min-height: 160px;
+    }
+
+    .service-fit-card {
+        min-height: 210px;
+    }
+
+    .service-fit-card span {
+        margin-bottom: 34px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .service-hero__card,
+    .service-overview__floating-card {
+        padding: 20px;
+    }
+
+    .service-overview__image {
+        min-height: 270px;
+    }
+
+    .service-compare-card {
+        padding: 20px;
+    }
+
+    .service-fit-card {
+        padding: 22px;
+    }
+}
+
+.service-scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.service-scroll-progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg,
+            var(--color-accent-yellow),
+            var(--color-accent-orange));
+    box-shadow: var(--shadow-yellow-glow);
+}
+
+.service-page-mini-note {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 10px;
+    align-items: center;
+    margin-top: 18px;
+    padding: 12px;
+    color: var(--color-text-muted-light);
+    border: 1px solid rgba(255, 210, 26, 0.2);
+    border-radius: var(--radius-xs);
+    background: rgba(255, 210, 26, 0.07);
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+.service-page-mini-note i {
+    color: var(--color-accent-yellow);
+}
+
+.service-page-mini-note strong {
+    color: var(--color-text-light);
+}
+
+.service-compare-card.is-muted,
+.service-fit-card.is-muted {
+    opacity: 0.58;
+}
+
+.service-compare-card.is-active {
+    transform: translateY(-6px);
+    border-color: rgba(255, 210, 26, 0.34);
+    box-shadow: 0 24px 62px rgba(17, 20, 23, 0.12), var(--shadow-yellow-glow);
+}
+
+.service-fit-card.is-active {
+    transform: translateY(-6px);
+    border-color: rgba(255, 210, 26, 0.36);
+    box-shadow: var(--shadow-dark-card), var(--shadow-yellow-glow);
+}
+
+.service-tabs-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin: 12px 0 22px;
+    padding: 14px 16px;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-sm);
+    background:
+        radial-gradient(circle at 0% 0%, rgba(255, 210, 26, 0.12), transparent 28%),
+        var(--color-bg-white);
+    box-shadow: 0 14px 36px rgba(17, 20, 23, 0.05);
+}
+
+.service-tabs-status__copy {
+    display: grid;
+    gap: 3px;
+}
+
+.service-tabs-status__copy span {
+    color: var(--color-text-soft);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.service-tabs-status__copy strong {
+    color: var(--color-text-dark);
+    font-size: 0.92rem;
+}
+
+.service-tabs-status__dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-tabs-status__dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(17, 20, 23, 0.18);
+    transition:
+        width var(--transition-base),
+        background var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.service-tabs-status__dot.is-active {
+    width: 24px;
+    border-radius: 999px;
+    background: linear-gradient(90deg,
+            var(--color-accent-yellow),
+            var(--color-accent-orange));
+    box-shadow: var(--shadow-yellow-glow);
+}
+
+.service-fit-summary {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+    align-items: center;
+    max-width: 760px;
+    margin: 24px auto 0;
+    padding: 16px;
+    color: var(--color-text-muted-light);
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.045);
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+.service-fit-summary i {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    color: var(--color-bg-dark);
+    border-radius: var(--radius-xs);
+    background: linear-gradient(135deg,
+            var(--color-accent-yellow),
+            var(--color-accent-orange));
+    box-shadow: var(--shadow-yellow-glow);
+}
+
+.service-overview__glow {
+    position: absolute;
+    left: var(--overview-glow-x, 50%);
+    top: var(--overview-glow-y, 50%);
+    z-index: 2;
+    width: 240px;
+    height: 240px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(255, 210, 26, 0.18),
+            rgba(241, 90, 36, 0.1),
+            transparent 68%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+}
+
+.service-overview__glow.is-active {
+    opacity: 1;
+}
+
+.service-faq-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: max-content;
+    margin-top: 18px;
+    padding: 9px 12px;
+    color: var(--color-bg-dark);
+    border-radius: 999px;
+    background: linear-gradient(135deg,
+            var(--color-accent-yellow),
+            var(--color-accent-orange));
+    font-size: 0.78rem;
+    font-weight: 900;
+    box-shadow: var(--shadow-yellow-glow);
+}
+
+@media (max-width: 760px) {
+    .service-tabs-status {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .service-fit-summary {
+        grid-template-columns: 1fr;
+    }
+}
