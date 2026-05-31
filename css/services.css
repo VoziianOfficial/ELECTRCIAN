@@ -1,11 +1,6 @@
-/* =========================================================
-   ELECTRCIAN — SERVICES PAGE
-   assets/css/services.css
-   ========================================================= */
 
-/* =========================
-   1. LOGO IMAGE SUPPORT
-   ========================= */
+
+
 
 .site-logo__icon img {
     width: 100%;
@@ -18,9 +13,7 @@
     display: none;
 }
 
-/* =========================
-   2. DESKTOP SERVICES DROPDOWN
-   ========================= */
+
 
 .nav-item--services {
     position: relative;
@@ -121,9 +114,7 @@
     line-height: 1.45;
 }
 
-/* =========================
-   3. MOBILE SERVICES LIST
-   ========================= */
+
 
 .mobile-menu__services {
     margin-bottom: 18px;
@@ -204,9 +195,7 @@
     line-height: 1.5;
 }
 
-/* =========================
-   4. SERVICES PAGE HERO
-   ========================= */
+
 
 .page-services .services-page-hero .hero__bg {
     background:
@@ -228,9 +217,7 @@
     color: var(--color-text-muted-light);
 }
 
-/* =========================
-   5. SERVICE GRID PAGE VARIANT
-   ========================= */
+
 
 .services-grid--four {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -291,9 +278,7 @@
     transform: translateX(4px);
 }
 
-/* =========================
-   6. OBJECT TABS
-   ========================= */
+
 
 .services-object-tabs {
     overflow: hidden;
@@ -447,9 +432,7 @@
     margin-top: 24px;
 }
 
-/* =========================
-   7. QUOTE CLARITY SECTION
-   ========================= */
+
 
 .quote-clarity-section .comparison-band__grid {
     grid-template-columns: 1.15fr 0.8fr 0.86fr 0.72fr;
@@ -470,9 +453,7 @@
     color: var(--color-text-dark);
 }
 
-/* =========================
-   8. SERVICES FAQ
-   ========================= */
+
 
 .services-faq .faq-list {
     max-width: 880px;
@@ -491,9 +472,7 @@
     margin: 0;
 }
 
-/* =========================
-   9. FOOTER DISCLAIMER
-   ========================= */
+
 
 .footer__disclaimer {
     padding: 0 0 26px;
@@ -509,9 +488,7 @@
     line-height: 1.6;
 }
 
-/* =========================
-   10. FORM STATUS / VALIDATION
-   ========================= */
+
 
 .form-status {
     margin-top: 4px;
@@ -538,9 +515,7 @@
     box-shadow: 0 0 0 4px rgba(241, 90, 36, 0.12) !important;
 }
 
-/* =========================
-   11. REVEAL ANIMATION
-   ========================= */
+
 
 .reveal-item {
     opacity: 0;
@@ -555,9 +530,7 @@
     transform: translateY(0);
 }
 
-/* =========================
-   12. RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1280px) {
     .quote-clarity-section .comparison-band__grid {
@@ -651,7 +624,7 @@
     }
 }
 
-/* HERO TITLE COLOR FIX */
+
 
 .hero__title .color {
     color: #fff !important;
@@ -663,7 +636,7 @@
     content: none !important;
 }
 
-/* если Providers должен остаться жёлтым */
+
 .hero__title>span:not(.color) {
     position: relative;
     display: inline-block;
@@ -671,9 +644,7 @@
     text-shadow: 0 0 34px rgba(255, 210, 26, 0.26);
 }
 
-/* =========================================================
-   PROVIDER CHECK CIRCUIT — REPLACES SERVICE GRID
-   ========================================================= */
+
 
 .provider-check {
     position: relative;
@@ -726,7 +697,7 @@
     font-size: 0.96rem;
 }
 
-/* circuit */
+
 .provider-check__circuit {
     position: relative;
     display: grid;
@@ -767,7 +738,7 @@
     animation: providerCheckCurrent 5s linear infinite;
 }
 
-/* items */
+
 .provider-check__item {
     position: relative;
     z-index: 2;
@@ -936,7 +907,7 @@
     }
 }
 
-/* TABLET */
+
 @media (min-width: 761px) and (max-width: 1080px) {
     .provider-check__layout {
         grid-template-columns: 1fr;
@@ -995,7 +966,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 760px) {
     .provider-check {
         padding: 54px 0;
@@ -1106,7 +1077,7 @@
         opacity: 0;
     }
 }
-/* PROVIDER CHECK — REDUCE SECTION PADDING */
+
 
 .provider-check {
     padding: clamp(30px, 3.5vw, 47px) 0 !important;
@@ -1124,7 +1095,7 @@
     }
 }
 
-/* OBJECT TABS — REDUCE SECTION PADDING */
+
 
 .services-object-tabs {
     padding-top: clamp(30px, 3.5vw, 47px) !important;
@@ -1157,9 +1128,7 @@
     }
 }
 
-/* =========================================================
-   COMPLEXITY SCALE — LIVE ELECTRIC VERSION
-   ========================================================= */
+
 
 #complexity-scale {
     position: relative;
@@ -1209,7 +1178,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.76);
 }
 
-/* сама шкала */
+
 #complexity-scale .complexity-steps {
     position: relative;
     display: grid;
@@ -1218,7 +1187,7 @@
     padding-top: 34px;
 }
 
-/* основная электрическая линия */
+
 #complexity-scale .complexity-steps::before {
     content: "";
     position: absolute;
@@ -1237,7 +1206,7 @@
         0 0 34px rgba(241, 90, 36, 0.16);
 }
 
-/* бегущий ток */
+
 #complexity-scale .complexity-steps::after {
     content: "";
     position: absolute;
@@ -1255,7 +1224,7 @@
     animation: complexityCurrentMove 5s linear infinite;
 }
 
-/* каждый уровень */
+
 #complexity-scale .complexity-step {
     position: relative;
     z-index: 5;
@@ -1322,7 +1291,7 @@
     line-height: 1.45;
 }
 
-/* акцент для последнего urgent */
+
 #complexity-scale .complexity-step:nth-child(4) .complexity-step__dot {
     background:
         radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 0.86), transparent 28%),
@@ -1385,7 +1354,7 @@
     }
 }
 
-/* TABLET */
+
 @media (min-width: 761px) and (max-width: 1080px) {
     #complexity-scale {
         padding: 42px 0;
@@ -1416,7 +1385,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 760px) {
     #complexity-scale {
         padding: 34px 0;
@@ -1507,9 +1476,7 @@
     }
 }
 
-/* =========================================================
-   QUOTE SIGNAL — FULL ALTERNATIVE REDESIGN
-   ========================================================= */
+
 
 .quote-signal {
     position: relative;
@@ -1563,7 +1530,7 @@
     font-size: 0.96rem;
 }
 
-/* main panel */
+
 .quote-signal__panel {
     position: relative;
     overflow: hidden;
@@ -1674,7 +1641,7 @@
     background: rgba(255, 255, 255, 0.045);
 }
 
-/* rows */
+
 .quote-signal__rows {
     display: grid;
     gap: 10px;
@@ -1724,7 +1691,7 @@
     color: var(--color-text-light);
 }
 
-/* footer */
+
 .quote-signal__footer {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -1774,7 +1741,7 @@
     }
 }
 
-/* TABLET */
+
 @media (min-width: 761px) and (max-width: 1080px) {
     .quote-signal {
         padding: 42px 0;
@@ -1806,7 +1773,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 760px) {
     .quote-signal {
         padding: 34px 0;
@@ -1865,9 +1832,7 @@
     }
 }
 
-/* =========================================================
-   ABOUT PAGE — REDUCE SECTION PADDINGS BY HALF
-   ========================================================= */
+
 
 .about-story,
 .about-model,
@@ -1877,7 +1842,7 @@
     padding-bottom: clamp(34px, 4vw, 56px) !important;
 }
 
-/* если внутри секций слишком большой отступ у заголовков */
+
 .about-story .section-heading,
 .about-model .section-heading,
 .about-safety .section-heading,
@@ -1885,7 +1850,7 @@
     margin-bottom: clamp(24px, 3vw, 34px) !important;
 }
 
-/* планшеты */
+
 @media (min-width: 761px) and (max-width: 1080px) {
 
     .about-story,
@@ -1897,7 +1862,7 @@
     }
 }
 
-/* мобилки */
+
 @media (max-width: 760px) {
 
     .about-story,

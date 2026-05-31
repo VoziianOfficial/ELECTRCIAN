@@ -1,11 +1,6 @@
-/* =========================================================
-   ELECTRCIAN — LEGAL PAGES
-   assets/css/legal.css
-   ========================================================= */
 
-/* =========================
-   1. LEGAL HERO
-   ========================= */
+
+
 
 .legal-hero {
     position: relative;
@@ -159,9 +154,7 @@
     line-height: 1.55;
 }
 
-/* =========================
-   2. LEGAL LAYOUT
-   ========================= */
+
 
 .legal-content-section {
     overflow: visible;
@@ -224,9 +217,7 @@
     background: var(--color-accent-orange-soft);
 }
 
-/* =========================
-   3. LEGAL CONTENT
-   ========================= */
+
 
 .legal-content {
     display: grid;
@@ -323,9 +314,7 @@
     text-decoration-color: var(--color-accent-orange);
 }
 
-/* =========================
-   4. IMPORTANT LEGAL NOTICE
-   ========================= */
+
 
 .legal-block--notice {
     color: var(--color-text-light);
@@ -349,9 +338,7 @@
     opacity: 1;
 }
 
-/* =========================
-   5. LEGAL CONTACT CARD
-   ========================= */
+
 
 .legal-contact-card {
     display: grid;
@@ -383,9 +370,7 @@
     word-break: break-word;
 }
 
-/* =========================
-   6. CODE NOTE
-   ========================= */
+
 
 .legal-code-note {
     margin: 18px 0;
@@ -404,9 +389,7 @@
     word-break: break-word;
 }
 
-/* =========================
-   7. RELATED LEGAL LINKS
-   ========================= */
+
 
 .legal-page-links {
     display: grid;
@@ -466,9 +449,7 @@
     color: var(--color-accent-yellow);
 }
 
-/* =========================
-   8. LEGAL CTA
-   ========================= */
+
 
 .legal-cta {
     background:
@@ -483,9 +464,7 @@
         rgba(255, 255, 255, 0.035);
 }
 
-/* =========================
-   9. RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1080px) {
 

@@ -1,11 +1,6 @@
-/* =========================================================
-   ELECTRCIAN — CONTACT PAGE
-   assets/css/contact.css
-   ========================================================= */
 
-/* =========================
-   1. CONTACT HERO
-   ========================= */
+
+
 
 .page-contact .contact-hero .hero__bg {
     background:
@@ -27,9 +22,7 @@
     color: var(--color-text-muted-light);
 }
 
-/* =========================
-   2. CONTACT FORM SECTION
-   ========================= */
+
 
 .contact-form-section {
     overflow: hidden;
@@ -93,9 +86,7 @@
     line-height: 1.55;
 }
 
-/* =========================
-   3. FORM CARD
-   ========================= */
+
 
 .contact-form-card {
     position: relative;
@@ -182,9 +173,7 @@
     font-size: 0.78rem;
 }
 
-/* =========================
-   4. CUSTOM CHECKBOX
-   ========================= */
+
 
 .custom-checkbox {
     display: grid;
@@ -260,9 +249,7 @@
     line-height: 1.55;
 }
 
-/* =========================
-   5. CONTACT INFO CARDS
-   ========================= */
+
 
 .contact-info-grid {
     display: grid;
@@ -347,9 +334,7 @@
     color: var(--color-accent-orange);
 }
 
-/* =========================
-   6. COVERAGE SECTION
-   ========================= */
+
 
 .contact-coverage__grid {
     display: grid;
@@ -377,9 +362,7 @@
     margin-top: 26px;
 }
 
-/* =========================
-   7. COVERAGE CARD VISUAL
-   ========================= */
+
 
 .coverage-card {
     position: relative;
@@ -570,9 +553,7 @@
     }
 }
 
-/* =========================
-   8. CONTACT FAQ
-   ========================= */
+
 
 .contact-faq .faq-list {
     max-width: 880px;
@@ -587,9 +568,7 @@
     margin: 0;
 }
 
-/* =========================
-   9. LEGAL CTA
-   ========================= */
+
 
 .contact-legal-cta .cta-banner__inner {
     background:
@@ -597,9 +576,7 @@
         rgba(255, 255, 255, 0.035);
 }
 
-/* =========================
-   10. VALIDATION STATES
-   ========================= */
+
 
 .contact-form .is-invalid {
     border-color: var(--color-accent-orange) !important;
@@ -635,9 +612,7 @@
     border: 1px solid rgba(241, 90, 36, 0.34);
 }
 
-/* =========================
-   11. RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1080px) {
 
@@ -745,9 +720,7 @@
     }
 }
 
-/* =========================================================
-   CONTACT FORM SECTION — COMPACT VERSION
-   ========================================================= */
+
 
 .contact-form-section {
     padding-top: clamp(32px, 4vw, 56px) !important;
@@ -776,7 +749,7 @@
     padding: 14px;
 }
 
-/* сама форма меньше */
+
 .contact-form-card {
     width: 100%;
     max-width: 520px;
@@ -793,7 +766,7 @@
     gap: 12px !important;
 }
 
-/* поля ниже */
+
 .contact-form-section .form-field {
     gap: 5px;
 }
@@ -815,7 +788,7 @@
     font-size: 0.86rem;
 }
 
-/* чекбокс компактнее */
+
 .contact-form-section .custom-checkbox {
     gap: 10px;
     padding: 12px !important;
@@ -826,7 +799,7 @@
     line-height: 1.45;
 }
 
-/* кнопка ниже */
+
 .contact-form-section .btn {
     min-height: 44px !important;
 }
@@ -836,7 +809,7 @@
     font-size: 0.74rem;
 }
 
-/* TABLET */
+
 @media (min-width: 761px) and (max-width: 1080px) {
     .contact-form-section {
         padding-top: 38px !important;
@@ -858,7 +831,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 760px) {
     .contact-form-section {
         padding-top: 30px !important;
@@ -894,7 +867,7 @@
     }
 }
 
-/* CONTACT FORM HEADING — TWO LINES */
+
 
 .contact-form-section__grid {
     grid-template-columns: minmax(0, 0.95fr) minmax(420px, 0.85fr) !important;
@@ -910,7 +883,7 @@
     line-height: 0.92 !important;
 }
 
-/* планшет */
+
 @media (min-width: 761px) and (max-width: 1080px) {
     .contact-form-section__grid {
         grid-template-columns: 1fr !important;
@@ -932,7 +905,7 @@
     }
 }
 
-/* мобилка */
+
 @media (max-width: 760px) {
     .contact-form-section__intro h2 {
         max-width: 100% !important;
@@ -940,9 +913,7 @@
     }
 }
 
-/* =========================================================
-   CONTACT INFO STRIP — COMPACT REDESIGN
-   ========================================================= */
+
 
 .contact-info-section {
     padding-top: clamp(34px, 4vw, 58px) !important;
@@ -1060,7 +1031,7 @@
     color: var(--color-text-dark);
 }
 
-/* TABLET */
+
 @media (min-width: 761px) and (max-width: 1080px) {
     .contact-info-section {
         padding-top: 38px !important;
@@ -1094,7 +1065,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 760px) {
     .contact-info-section {
         padding-top: 30px !important;
@@ -1121,11 +1092,9 @@
     }
 }
 
-/* =========================================================
-   CONTACT FORM SECTION — TABLET & MOBILE ADAPTATION
-   ========================================================= */
 
-/* TABLET */
+
+
 @media (min-width: 761px) and (max-width: 1080px) {
     .contact-form-section {
         padding-top: 42px !important;
@@ -1217,7 +1186,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 760px) {
     .contact-form-section {
         padding-top: 32px !important;
@@ -1338,7 +1307,7 @@
     }
 }
 
-/* SMALL MOBILE */
+
 @media (max-width: 420px) {
     .contact-form-section__intro h2 {
         font-size: clamp(2.05rem, 13vw, 2.85rem) !important;
@@ -1358,9 +1327,7 @@
     }
 }
 
-/* =========================================================
-   CONTACT FORM — REMOVE EXTRA TEXT + MAKE FORM SHORTER
-   ========================================================= */
+
 
 .contact-project-hint,
 .contact-character-counter,
@@ -1369,12 +1336,12 @@
     display: none !important;
 }
 
-/* если хочешь убрать нижнюю подпись тоже */
+
 .contact-form__helper {
     display: none !important;
 }
 
-/* форма ниже по высоте */
+
 .contact-form-card {
     max-width: 480px !important;
     padding: 16px !important;
@@ -1414,7 +1381,7 @@
     margin-top: 2px !important;
 }
 
-/* планшеты */
+
 @media (min-width: 761px) and (max-width: 1080px) {
     .contact-form-card {
         max-width: 520px !important;
@@ -1431,7 +1398,7 @@
     }
 }
 
-/* мобилки */
+
 @media (max-width: 760px) {
     .contact-form-card {
         max-width: 100% !important;
@@ -1457,9 +1424,7 @@
     }
 }
 
-/* =========================================================
-   CONTACT COVERAGE — NO MAP REDESIGN
-   ========================================================= */
+
 
 .contact-coverage-section {
     position: relative;
@@ -1517,7 +1482,7 @@
     margin-top: 26px;
 }
 
-/* right side */
+
 .contact-coverage-flow__rail {
     position: relative;
     display: grid;
@@ -1558,7 +1523,7 @@
     animation: coveragePulseMove 5s linear infinite;
 }
 
-/* cards */
+
 .coverage-factor {
     position: relative;
     z-index: 2;
@@ -1703,7 +1668,7 @@
     }
 }
 
-/* TABLET */
+
 @media (min-width: 761px) and (max-width: 1080px) {
     .contact-coverage-section {
         padding-top: 38px !important;
@@ -1751,7 +1716,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 760px) {
     .contact-coverage-section {
         padding-top: 30px !important;
@@ -1851,9 +1816,7 @@
     }
 }
 
-/* =========================================================
-   CONTACT COVERAGE — MOBILE REDESIGN FINAL
-   ========================================================= */
+
 
 @media (max-width: 760px) {
     .contact-coverage-section {
@@ -1895,7 +1858,7 @@
         min-height: 44px !important;
     }
 
-    /* убираем старую вертикальную линию/ток */
+    
     .contact-coverage-flow__line,
     .contact-coverage-flow__pulse {
         display: none !important;
@@ -1908,7 +1871,7 @@
         padding-top: 0 !important;
     }
 
-    /* карточки становятся компактными */
+    
     .coverage-factor {
         position: relative !important;
         min-height: 118px !important;
@@ -1950,7 +1913,7 @@
         left: 120%;
     }
 
-    /* сбрасываем старое grid-поведение */
+    
     .coverage-factor>*:not(.coverage-factor__icon) {
         grid-column: auto !important;
     }

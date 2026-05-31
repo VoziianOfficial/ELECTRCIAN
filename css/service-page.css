@@ -1,12 +1,6 @@
-/* =========================================================
-   ELECTRCIAN — SERVICE PAGES
-   assets/css/service-page.css
-   Shared styles for all 4 service pages
-   ========================================================= */
 
-/* =========================
-   1. SERVICE HERO
-   ========================= */
+
+
 
 .service-hero {
     position: relative;
@@ -202,9 +196,7 @@
     color: var(--color-accent-yellow);
 }
 
-/* =========================
-   2. SERVICE OVERVIEW
-   ========================= */
+
 
 .service-overview {
     overflow: hidden;
@@ -342,9 +334,7 @@
     line-height: 1.45;
 }
 
-/* =========================
-   3. COMPARE GRID
-   ========================= */
+
 
 .service-compare-grid {
     overflow: hidden;
@@ -425,9 +415,7 @@
     line-height: 1.5;
 }
 
-/* =========================
-   4. SERVICE TABS
-   ========================= */
+
 
 .service-tabs {
     overflow: hidden;
@@ -443,9 +431,7 @@
         linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 246, 243, 0.94));
 }
 
-/* =========================
-   5. PROJECT COMPLEXITY / FIT
-   ========================= */
+
 
 .service-fit-section {
     overflow: hidden;
@@ -559,9 +545,7 @@
     box-shadow: var(--shadow-orange-glow);
 }
 
-/* =========================
-   6. SERVICE FAQ
-   ========================= */
+
 
 .service-faq .faq-list {
     max-width: 900px;
@@ -576,9 +560,7 @@
     margin: 0;
 }
 
-/* =========================
-   7. FINAL CTA
-   ========================= */
+
 
 .service-final-cta {
     background:
@@ -608,9 +590,7 @@
         var(--color-bg-dark);
 }
 
-/* =========================
-   8. RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1280px) {
     .service-compare-grid__items {
@@ -924,9 +904,7 @@
     }
 }
 
-/* =========================================================
-   QUOTE DECODER — FULL REDESIGN
-   ========================================================= */
+
 
 .quote-decoder {
     position: relative;
@@ -981,7 +959,7 @@
     line-height: 1.6;
 }
 
-/* track */
+
 .quote-decoder__track {
     position: relative;
     display: grid;
@@ -1022,7 +1000,7 @@
     animation: quoteDecoderCurrent 5.2s linear infinite;
 }
 
-/* items */
+
 .quote-decoder__item {
     position: relative;
     z-index: 2;
@@ -1188,7 +1166,7 @@
     }
 }
 
-/* TABLET */
+
 @media (min-width: 761px) and (max-width: 1080px) {
     .quote-decoder {
         padding-top: 38px !important;
@@ -1237,7 +1215,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 760px) {
     .quote-decoder {
         padding-top: 30px !important;
@@ -1299,9 +1277,7 @@
     }
 }
 
-/* =========================================================
-   SERVICE FIT LINE — DARK HORIZONTAL CURRENT SCALE
-   ========================================================= */
+
 
 .service-fit-line {
     position: relative;
@@ -1353,7 +1329,7 @@
     line-height: 1.6;
 }
 
-/* horizontal scale */
+
 .service-fit-line__track {
     position: relative;
     z-index: 2;
@@ -1397,7 +1373,7 @@
     animation: serviceFitCurrent 5.4s linear infinite;
 }
 
-/* points, not cards */
+
 .service-fit-line__point {
     position: relative;
     display: grid;
@@ -1537,7 +1513,7 @@
     }
 }
 
-/* TABLET */
+
 @media (min-width: 761px) and (max-width: 1080px) {
     .service-fit-line {
         padding-top: 38px !important;
@@ -1571,7 +1547,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 760px) {
     .service-fit-line {
         padding-top: 30px !important;

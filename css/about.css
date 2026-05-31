@@ -1,11 +1,6 @@
-/* =========================================================
-   ELECTRCIAN — ABOUT PAGE
-   assets/css/about.css
-   ========================================================= */
 
-/* =========================
-   1. ABOUT HERO
-   ========================= */
+
+
 
 .page-about .about-hero .hero__bg {
     background:
@@ -27,9 +22,7 @@
     color: var(--color-text-muted-light);
 }
 
-/* =========================
-   2. COMPANY STORY
-   ========================= */
+
 
 .about-story {
     overflow: hidden;
@@ -145,9 +138,7 @@
     line-height: 1.45;
 }
 
-/* =========================
-   3. AGGREGATOR MODEL
-   ========================= */
+
 
 .about-model {
     overflow: hidden;
@@ -230,9 +221,7 @@
     font-size: 0.95rem;
 }
 
-/* =========================
-   4. RUNNING TICKER
-   ========================= */
+
 
 .about-ticker-section {
     position: relative;
@@ -307,9 +296,7 @@
     }
 }
 
-/* =========================
-   5. PROVIDER FIT SECTION
-   ========================= */
+
 
 .page-about #provider-fit .feature-grid {
     grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -319,9 +306,7 @@
     min-height: 176px;
 }
 
-/* =========================
-   6. SAFETY REMINDER
-   ========================= */
+
 
 .about-safety {
     overflow: hidden;
@@ -449,9 +434,7 @@
     color: var(--color-accent-orange);
 }
 
-/* =========================
-   7. ABOUT FAQ
-   ========================= */
+
 
 .about-faq .faq-list {
     max-width: 880px;
@@ -466,9 +449,7 @@
     margin: 0;
 }
 
-/* =========================
-   8. RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1280px) {
     .page-about #provider-fit .feature-grid {
@@ -645,9 +626,7 @@
     opacity: 1;
 }
 
-/* =========================================================
-   HERO TITLE — ONLY CLARITY IS YELLOW
-   ========================================================= */
+
 
 .hero__title.hero__title--three-lines {
     color: var(--color-text-light) !important;
@@ -660,13 +639,13 @@
     white-space: nowrap;
 }
 
-/* убираем жёлтую подложку/линию со строк */
+
 .hero__title.hero__title--three-lines>.hero__title-line::after {
     display: none !important;
     content: none !important;
 }
 
-/* только clarity жёлтый */
+
 .hero__title.hero__title--three-lines .hero__title-accent {
     position: relative;
     display: inline-block;
@@ -674,7 +653,7 @@
     text-shadow: 0 0 34px rgba(255, 210, 26, 0.26) !important;
 }
 
-/* подчёркивание только под clarity */
+
 .hero__title.hero__title--three-lines .hero__title-accent::after {
     content: "";
     position: absolute;
