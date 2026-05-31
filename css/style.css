@@ -4063,3 +4063,317 @@ body {
     transform: translateX(4px);
     color: var(--color-text-dark);
 }
+
+/* =========================================================
+   TABLET FIX — PROJECT LIST 3 IN ROW + COMPARISON FLOW 3 CARDS
+   ========================================================= */
+
+@media (min-width: 761px) and (max-width: 1080px) {
+
+    /* PROJECT TYPES — список по 3 в ряд */
+    .project-types__list {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+        margin: 24px 0 28px !important;
+    }
+
+    .project-types__list li {
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        padding: 10px 12px 10px 28px !important;
+        border: 1px solid var(--color-border-light);
+        border-radius: var(--radius-xs);
+        background: rgba(255, 255, 255, 0.7);
+        font-size: 0.82rem;
+        line-height: 1.25;
+    }
+
+    .project-types__list li::before {
+        left: 12px !important;
+        top: 50% !important;
+        transform: translateY(-50%);
+    }
+
+    /* COMPARISON FLOW — intro сверху, карточки 3 в ряд */
+    .comparison-flow__layout {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .comparison-flow__intro {
+        max-width: 720px !important;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .comparison-flow__intro h2 {
+        max-width: 640px;
+        margin-inline: auto;
+        font-size: clamp(2.35rem, 5vw, 3.6rem);
+    }
+
+    .comparison-flow__intro p {
+        max-width: 560px;
+        margin-inline: auto;
+    }
+
+    .comparison-flow__intro .btn {
+        margin-top: 22px;
+    }
+
+    .comparison-flow__rail {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+        max-width: 100% !important;
+        margin-inline: 0 !important;
+    }
+
+    .comparison-flow-card {
+        min-height: 188px !important;
+        padding: 18px !important;
+        border-radius: var(--radius-sm);
+    }
+
+    .comparison-flow-card__icon {
+        width: 44px !important;
+        height: 44px !important;
+        margin-bottom: 16px !important;
+        border-radius: 13px !important;
+    }
+
+    .comparison-flow-card__icon i {
+        font-size: 1.05rem !important;
+    }
+
+    .comparison-flow-card__step {
+        top: 16px !important;
+        right: 16px !important;
+        font-size: 1.7rem !important;
+    }
+
+    .comparison-flow-card h3 {
+        font-size: 0.96rem !important;
+        line-height: 1.18 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .comparison-flow-card p {
+        font-size: 0.78rem !important;
+        line-height: 1.45 !important;
+    }
+
+    .comparison-flow__line,
+    .comparison-flow__pulse {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   HOW IT WORKS — MOBILE REDESIGN
+   ========================================================= */
+
+@media (max-width: 760px) {
+    .how-it-works {
+        padding: 54px 0 58px !important;
+    }
+
+    .how-it-works__grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    /* маленькая визуальная лампа сверху */
+    .how-it-works__visual {
+        order: -1;
+    }
+
+    .bulb-visual {
+        width: 190px !important;
+        margin-inline: auto !important;
+        aspect-ratio: 1 !important;
+    }
+
+    .bulb-visual::before {
+        inset: 12% !important;
+        border-width: 2px !important;
+    }
+
+    .bulb-visual::after {
+        bottom: 18% !important;
+        width: 54px !important;
+        height: 28px !important;
+    }
+
+    .bulb-visual i {
+        font-size: 8.2rem !important;
+    }
+
+    .how-it-works__content {
+        position: relative;
+    }
+
+    .how-it-works__content .section-kicker {
+        margin-bottom: 12px;
+    }
+
+    .how-it-works__content h2 {
+        max-width: 360px;
+        font-size: clamp(2.25rem, 12vw, 3.35rem) !important;
+        line-height: 0.92 !important;
+        text-align: left;
+    }
+
+    /* steps становятся компактным маршрутом */
+    .how-steps {
+        position: relative;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        margin-top: 28px !important;
+        padding-left: 0 !important;
+    }
+
+    .how-steps::before {
+        content: "";
+        position: absolute;
+        left: 24px;
+        top: 28px;
+        bottom: 28px;
+        width: 2px;
+        background: linear-gradient(180deg,
+                rgba(255, 210, 26, 0.75),
+                rgba(241, 90, 36, 0.55),
+                rgba(255, 210, 26, 0.12));
+        box-shadow: 0 0 18px rgba(255, 210, 26, 0.22);
+    }
+
+    .how-steps::after {
+        content: "";
+        position: absolute;
+        left: 18px;
+        top: 28px;
+        z-index: 4;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--color-accent-yellow);
+        box-shadow:
+            0 0 0 7px rgba(255, 210, 26, 0.1),
+            0 0 24px rgba(255, 210, 26, 0.72);
+        animation: howMobileCurrentRoute 4.2s linear infinite;
+    }
+
+    .how-step {
+        position: relative !important;
+        display: grid !important;
+        grid-template-columns: 48px 1fr !important;
+        column-gap: 14px !important;
+        align-items: center !important;
+        min-height: 104px !important;
+        padding: 16px 16px 16px 0 !important;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        border-radius: 18px;
+        background:
+            radial-gradient(circle at 0% 50%, rgba(255, 210, 26, 0.12), transparent 34%),
+            rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(10px);
+    }
+
+    /* отключаем старые линии/ток на самих article */
+    .how-step::before,
+    .how-step::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    .how-step__number {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        z-index: 5 !important;
+        width: 48px !important;
+        height: 48px !important;
+        margin-left: 0 !important;
+        color: var(--color-bg-dark) !important;
+        border: 0 !important;
+        background: linear-gradient(135deg,
+                var(--color-accent-yellow),
+                var(--color-accent-orange)) !important;
+        box-shadow: var(--shadow-yellow-glow) !important;
+    }
+
+    .how-step h3 {
+        grid-column: 2;
+        color: var(--color-text-light);
+        font-size: 0.98rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .how-step p {
+        grid-column: 2;
+        margin-top: 5px !important;
+        color: var(--color-text-muted-light);
+        font-size: 0.82rem !important;
+        line-height: 1.45 !important;
+    }
+
+    .how-step:hover {
+        border-color: rgba(255, 210, 26, 0.28);
+        background:
+            radial-gradient(circle at 0% 50%, rgba(255, 210, 26, 0.16), transparent 36%),
+            rgba(255, 255, 255, 0.06);
+    }
+}
+
+@keyframes howMobileCurrentRoute {
+    0% {
+        transform: translateY(0) scale(0.75);
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(130px) scale(1);
+        opacity: 1;
+    }
+
+    92% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(260px) scale(0.75);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .bulb-visual {
+        width: 160px !important;
+    }
+
+    .bulb-visual i {
+        font-size: 7rem !important;
+    }
+
+    .how-step {
+        min-height: 96px !important;
+        padding-right: 14px !important;
+        border-radius: 16px;
+    }
+
+    .how-step h3 {
+        font-size: 0.92rem !important;
+    }
+
+    .how-step p {
+        font-size: 0.78rem !important;
+    }
+}
