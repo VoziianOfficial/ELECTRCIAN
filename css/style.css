@@ -1646,13 +1646,13 @@ h6 {
     min-height: 360px;
     border-radius: var(--radius-lg);
     background:
-        linear-gradient(90deg, rgba(247, 246, 243, 0.02), rgba(247, 246, 243, 0.92) 68%),
-        url("../assets/images/electrical-tools.jpg") center / cover no-repeat,
-        linear-gradient(135deg, #E7E0D5, #FFFFFF);
+        linear-gradient(180deg,
+            rgba(11, 13, 15, 0.08),
+            rgba(11, 13, 15, 0.34)),
+        url("../assets/images/electrical-tools.jpg") center / cover no-repeat;
     box-shadow: 0 24px 64px rgba(17, 20, 23, 0.12);
     border: 1px solid var(--color-border-light);
 }
-
 .safety-illustration-card::after {
     content: "";
     position: absolute;
@@ -4551,3 +4551,4 @@ body {
         margin-right: auto !important;
     }
 }
+
