@@ -703,11 +703,6 @@
     }
 }
 
-/* =========================================================
-   LEGAL PAGES — FINAL TABLET / MOBILE RESPONSIVE FIX
-   ========================================================= */
-
-/* защита от горизонтального скролла */
 .page-legal,
 .page-legal main,
 .page-legal .legal-content-section,
@@ -720,7 +715,7 @@
     max-width: 1180px;
 }
 
-/* TABLET */
+
 @media (min-width: 761px) and (max-width: 1080px) {
     .page-legal .topbar__inner {
         gap: 10px;
@@ -994,7 +989,7 @@
         gap: 18px !important;
     }
 
-    /* sidebar превращаем в горизонтальные chips */
+
     .legal-sidebar {
         position: sticky !important;
         top: var(--header-height, 68px) !important;
@@ -1168,7 +1163,7 @@
     }
 }
 
-/* SMALL MOBILE */
+
 @media (max-width: 420px) {
     .page-legal .container {
         width: min(100% - 24px, 100%);
