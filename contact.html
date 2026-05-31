@@ -352,58 +352,56 @@
         </div>
     </section>
 
-        <!-- 4. COVERAGE CARD INSTEAD OF MAP -->
-        <section class="section section--light contact-coverage-section" id="coverage" data-section="Coverage">
-            <div class="container contact-coverage__grid">
-                <div class="contact-coverage__content">
-                    <span class="section-kicker">USA provider matching coverage</span>
-                    <h2>Coverage without an external map.</h2>
-
-                    <p>
-                        This website uses a clean coverage card instead of an embedded map.
-                        No Google Maps API key is required, and the section stays fast, private,
-                        and visually consistent.
-                    </p>
-
-                    <ul class="safety-list">
-                        <li>Provider options may vary by ZIP code</li>
-                        <li>Service categories can affect availability</li>
-                        <li>Some projects may require permits or inspections</li>
-                        <li>Homeowners should verify all provider details directly</li>
-                    </ul>
-                </div>
-
-                <aside class="coverage-card" aria-label="USA provider matching coverage visual">
-                    <div class="coverage-card__head">
-                        <span class="coverage-card__badge">
-                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                            Platform address
-                        </span>
-
-                        <p data-address-text>
-                            214 Market Street, Denver, CO 80202, USA
-                        </p>
-                    </div>
-
-                    <div class="coverage-card__visual" aria-hidden="true">
-                        <span class="coverage-card__dot coverage-card__dot--one"></span>
-                        <span class="coverage-card__dot coverage-card__dot--two"></span>
-                        <span class="coverage-card__dot coverage-card__dot--three"></span>
-                        <span class="coverage-card__dot coverage-card__dot--four"></span>
-                        <span class="coverage-card__line coverage-card__line--one"></span>
-                        <span class="coverage-card__line coverage-card__line--two"></span>
-                        <span class="coverage-card__line coverage-card__line--three"></span>
-                    </div>
-
-                    <div class="coverage-card__footer">
-                        <strong data-company-name>Electrcian</strong>
-                        <span data-service-area>
-                            Independent electrical provider matching across selected areas in the United States
-                        </span>
-                    </div>
-                </aside>
+    <!-- 4. COVERAGE / AVAILABILITY LOGIC -->
+    <section class="section section--light contact-coverage-section" id="coverage" data-section="Coverage">
+        <div class="container contact-coverage-flow">
+            <div class="contact-coverage-flow__content">
+                <span class="section-kicker">Provider availability</span>
+                <h2>How does availability work?</h2>
+    
+                <p>
+                    {{companyName}} helps organize electrical provider comparison requests, but availability,
+                    response time, pricing, and service area can vary by provider and location.
+                </p>
+    
+                <a href="#contact-form" class="btn btn--outline">
+                    <span>Start a Request</span>
+                </a>
             </div>
-        </section>
+    
+            <div class="contact-coverage-flow__rail" aria-label="Provider availability factors">
+                <span class="contact-coverage-flow__line" aria-hidden="true"></span>
+                <span class="contact-coverage-flow__pulse" aria-hidden="true"></span>
+    
+                <article class="coverage-factor">
+                    <span class="coverage-factor__icon">
+                        <i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
+                    </span>
+                    <span class="coverage-factor__number">01</span>
+                    <h3>ZIP code</h3>
+                    <p>Provider options can change depending on local service coverage.</p>
+                </article>
+    
+                <article class="coverage-factor">
+                    <span class="coverage-factor__icon">
+                        <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+                    </span>
+                    <span class="coverage-factor__number">02</span>
+                    <h3>Project category</h3>
+                    <p>Repair, panel, wiring, or EV charger requests may match different providers.</p>
+                </article>
+    
+                <article class="coverage-factor coverage-factor--dark">
+                    <span class="coverage-factor__icon">
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                    </span>
+                    <span class="coverage-factor__number">03</span>
+                    <h3>Verification</h3>
+                    <p>Homeowners should verify license, insurance, permits, and written quote details.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
         <!-- 5. CONTACT FAQ -->
         <section class="section section--white contact-faq" id="contact-faq" data-section="FAQ">
