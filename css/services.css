@@ -244,25 +244,25 @@
 .services-grid--four .service-card:nth-child(1)::before {
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.08), rgba(11, 13, 15, 0.92)),
-        url("../images/electrical-repair.jpg") center / cover no-repeat;
+        url("../assets/images/electrical-repair.jpg") center / cover no-repeat;
 }
 
 .services-grid--four .service-card:nth-child(2)::before {
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.08), rgba(11, 13, 15, 0.92)),
-        url("../images/panel-upgrades.jpg") center / cover no-repeat;
+        url("../assets/images/panel-upgrades.jpg") center / cover no-repeat;
 }
 
 .services-grid--four .service-card:nth-child(3)::before {
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.08), rgba(11, 13, 15, 0.92)),
-        url("../images/wiring-rewiring.jpg") center / cover no-repeat;
+        url("../assets/images/wiring-rewiring.jpg") center / cover no-repeat;
 }
 
 .services-grid--four .service-card:nth-child(4)::before {
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.08), rgba(11, 13, 15, 0.92)),
-        url("../images/ev-charger.jpg") center / cover no-repeat;
+        url("../assets/images/ev-charger.jpg") center / cover no-repeat;
 }
 
 .service-card__link {
@@ -382,7 +382,7 @@
 }
 
 .object-tabs__image--cord::before {
-    background-image: url("../assets/images/electrical-tools.jpg");
+    background-image: url("../assets/images/cord-upgrades.jpg");
 }
 
 .object-tabs__image--wire::before {
@@ -394,11 +394,11 @@
 }
 
 .object-tabs__image--battery::before {
-    background-image: url("../assets/images/quote-clarity.jpg");
+    background-image: url("../assets/images/battery-upgrades.jpg");
 }
 
 .object-tabs__image--panel::before {
-    background-image: url("../assets/images/breaker-panel.jpg");
+    background-image: url("../assets/images/panel-upgrades.jpg");
 }
 
 .object-tabs__content {

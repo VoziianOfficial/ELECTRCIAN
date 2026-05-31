@@ -49,7 +49,7 @@
                 title: 'Electrical Repair',
                 shortTitle: 'Repair',
                 href: 'electrical-repair.html',
-                image: 'assets/images/electrical-repair.jpg',
+                image: '../assets/images/electrical-repair.jpg',
                 icon: 'fa-screwdriver-wrench',
                 summary:
                     'Compare local providers for troubleshooting, outlet issues, breaker concerns, and power problems.'
@@ -59,7 +59,7 @@
                 title: 'Panel Upgrades',
                 shortTitle: 'Panels',
                 href: 'panel-upgrades.html',
-                image: 'assets/images/panel-upgrades.jpg',
+                image: '../assets/images/panel-upgrades.jpg',
                 icon: 'fa-table-columns',
                 summary:
                     'Review provider options for panel replacement, capacity upgrades, and modern power distribution needs.'
@@ -69,7 +69,7 @@
                 title: 'Wiring & Rewiring',
                 shortTitle: 'Wiring',
                 href: 'wiring-rewiring.html',
-                image: 'assets/images/wiring-rewiring.jpg',
+                image: '../assets/images/wiring-rewiring.jpg',
                 icon: 'fa-plug-circle-bolt',
                 summary:
                     'Compare companies for new wiring, rewiring, circuit planning, and electrical layout updates.'
@@ -79,7 +79,7 @@
                 title: 'EV Charger Installation',
                 shortTitle: 'EV Chargers',
                 href: 'ev-charger-installation.html',
-                image: 'assets/images/ev-charger.jpg',
+                image: '../assets/images/ev-charger.jpg',
                 icon: 'fa-car-battery',
                 summary:
                     'Explore local provider options for home EV charger setup, circuit review, and quote comparison.'

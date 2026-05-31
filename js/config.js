@@ -64,7 +64,7 @@ window.SITE_CONFIG = {
             title: 'Electrical Repair',
             shortTitle: 'Repair',
             href: 'electrical-repair.html',
-            image: 'assets/images/electrical-repair.jpg',
+            image: '../assets/images/electrical-repair.jpg',
             icon: 'fa-screwdriver-wrench',
 
             heroTitle: 'Electrical Repair Provider Options',
@@ -122,7 +122,7 @@ window.SITE_CONFIG = {
             title: 'Panel Upgrades',
             shortTitle: 'Panels',
             href: 'panel-upgrades.html',
-            image: 'assets/images/panel-upgrades.jpg',
+            image: '../assets/images/panel-upgrades.jpg',
             icon: 'fa-table-columns',
 
             heroTitle: 'Panel Upgrade Provider Options',
@@ -180,7 +180,7 @@ window.SITE_CONFIG = {
             title: 'Wiring & Rewiring',
             shortTitle: 'Wiring',
             href: 'wiring-rewiring.html',
-            image: 'assets/images/wiring-rewiring.jpg',
+            image: '../assets/images/wiring-rewiring.jpg',
             icon: 'fa-plug-circle-bolt',
 
             heroTitle: 'Wiring & Rewiring Provider Options',
@@ -238,7 +238,7 @@ window.SITE_CONFIG = {
             title: 'EV Charger Installation',
             shortTitle: 'EV Chargers',
             href: 'ev-charger-installation.html',
-            image: 'assets/images/ev-charger.jpg',
+            image: '../assets/images/ev-charger.jpg',
             icon: 'fa-car-battery',
 
             heroTitle: 'EV Charger Installation Provider Options',
@@ -351,7 +351,7 @@ window.SITE_CONFIG = {
         {
             id: 'charger',
             label: 'Charger',
-            image: 'assets/images/ev-charger.jpg',
+            image: '../assets/images/ev-charger.jpg',
             title: 'EV charger project details',
             text:
                 'EV charger projects may involve charger location, dedicated circuit planning, panel capacity review, permit notes, and quote comparison.',
@@ -381,7 +381,7 @@ window.SITE_CONFIG = {
         {
             id: 'wire',
             label: 'Wire',
-            image: 'assets/images/wiring-rewiring.jpg',
+            image: '../assets/images/wiring-rewiring.jpg',
             title: 'Wiring and rewiring context',
             text:
                 'Wiring projects may involve access needs, circuit planning, code considerations, materials, and inspection questions.',
@@ -396,7 +396,7 @@ window.SITE_CONFIG = {
         {
             id: 'light-bulb',
             label: 'Light Bulb',
-            image: 'assets/images/lighting-detail.jpg',
+            image: '../assets/images/lighting-detail.jpg',
             title: 'Lighting project comparison',
             text:
                 'Lighting projects may include fixture type, indoor or outdoor location, switch controls, dimmer compatibility, and timeline.',

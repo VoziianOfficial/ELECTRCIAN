@@ -1052,7 +1052,7 @@ h6 {
     z-index: -2;
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.18), rgba(11, 13, 15, 0.9)),
-        url("../images/electrical-repair.jpg") center / cover no-repeat;
+        url("../assets/images/electrical-repair.jpg") center / cover no-repeat;
     opacity: 0.44;
     transition: transform var(--transition-slow), opacity var(--transition-base);
 }
@@ -1060,19 +1060,19 @@ h6 {
 .hero-service-card:nth-child(2)::before {
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.18), rgba(11, 13, 15, 0.9)),
-        url("../images/panel-upgrades.jpg") center / cover no-repeat;
+        url("../assets/images/panel-upgrades.jpg") center / cover no-repeat;
 }
 
 .hero-service-card:nth-child(3)::before {
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.18), rgba(11, 13, 15, 0.9)),
-        url("../images/wiring-rewiring.jpg") center / cover no-repeat;
+        url("../assets/images/wiring-rewiring.jpg") center / cover no-repeat;
 }
 
 .hero-service-card:nth-child(4)::before {
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.18), rgba(11, 13, 15, 0.9)),
-        url("../images/ev-charger.jpg") center / cover no-repeat;
+        url("../assets/images/ev-charger.jpg") center / cover no-repeat;
 }
 
 .hero-service-card::after {
@@ -1844,7 +1844,7 @@ h6 {
     color: var(--color-text-light);
     background:
         linear-gradient(90deg, rgba(11, 13, 15, 0.92), rgba(11, 13, 15, 0.62)),
-        url("../images/lighting-detail.jpg") center / cover no-repeat,
+        url("../assets/images/lighting-detail.jpg") center / cover no-repeat,
         var(--color-bg-dark);
 }
 

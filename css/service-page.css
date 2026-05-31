@@ -27,35 +27,35 @@
     transform: scale(1.02);
     background:
         linear-gradient(90deg, rgba(11, 13, 15, 0.96) 0%, rgba(11, 13, 15, 0.82) 48%, rgba(11, 13, 15, 0.58) 100%),
-        url("../images/electrical-repair.jpg") center / cover no-repeat,
+        url("../assets/images/electrical-repair.jpg") center / cover no-repeat,
         linear-gradient(135deg, #0B0D0F, #1D2227);
 }
 
 .service-hero--repair .service-hero__bg {
     background:
         linear-gradient(90deg, rgba(11, 13, 15, 0.96) 0%, rgba(11, 13, 15, 0.82) 48%, rgba(11, 13, 15, 0.58) 100%),
-        url("../images/electrical-repair.jpg") center / cover no-repeat,
+        url("../assets/images/electrical-repair.jpg") center / cover no-repeat,
         linear-gradient(135deg, #0B0D0F, #1D2227);
 }
 
 .service-hero--panel .service-hero__bg {
     background:
         linear-gradient(90deg, rgba(11, 13, 15, 0.96) 0%, rgba(11, 13, 15, 0.82) 48%, rgba(11, 13, 15, 0.58) 100%),
-        url("../images/panel-upgrades.jpg") center / cover no-repeat,
+        url("../assets/images/panel-upgrades.jpg") center / cover no-repeat,
         linear-gradient(135deg, #0B0D0F, #1D2227);
 }
 
 .service-hero--wiring .service-hero__bg {
     background:
         linear-gradient(90deg, rgba(11, 13, 15, 0.96) 0%, rgba(11, 13, 15, 0.82) 48%, rgba(11, 13, 15, 0.58) 100%),
-        url("../images/wiring-rewiring.jpg") center / cover no-repeat,
+        url("../assets/images/wiring-rewiring.jpg") center / cover no-repeat,
         linear-gradient(135deg, #0B0D0F, #1D2227);
 }
 
 .service-hero--ev .service-hero__bg {
     background:
         linear-gradient(90deg, rgba(11, 13, 15, 0.96) 0%, rgba(11, 13, 15, 0.82) 48%, rgba(11, 13, 15, 0.58) 100%),
-        url("../images/ev-charger.jpg") center / cover no-repeat,
+        url("../assets/images/ev-charger.jpg") center / cover no-repeat,
         linear-gradient(135deg, #0B0D0F, #1D2227);
 }
 
@@ -276,7 +276,7 @@
     border-radius: var(--radius-lg);
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.06), rgba(11, 13, 15, 0.68)),
-        url("../images/electrical-repair.jpg") center / cover no-repeat;
+        url("../assets/images/electrical-repair.jpg") center / cover no-repeat;
     box-shadow: 0 26px 70px rgba(17, 20, 23, 0.14);
 }
 
@@ -292,25 +292,25 @@
 .service-overview__image--repair {
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.06), rgba(11, 13, 15, 0.68)),
-        url("../images/electrical-repair.jpg") center / cover no-repeat;
+        url("../assets/images/electrical-repair.jpg") center / cover no-repeat;
 }
 
 .service-overview__image--panel {
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.06), rgba(11, 13, 15, 0.68)),
-        url("../images/panel-upgrades.jpg") center / cover no-repeat;
+        url("../assets/images/panel-upgrades.jpg") center / cover no-repeat;
 }
 
 .service-overview__image--wiring {
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.06), rgba(11, 13, 15, 0.68)),
-        url("../images/wiring-rewiring.jpg") center / cover no-repeat;
+        url("../assets/images/wiring-rewiring.jpg") center / cover no-repeat;
 }
 
 .service-overview__image--ev {
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.06), rgba(11, 13, 15, 0.68)),
-        url("../images/ev-charger.jpg") center / cover no-repeat;
+        url("../assets/images/ev-charger.jpg") center / cover no-repeat;
 }
 
 .service-overview__floating-card {
