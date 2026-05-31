@@ -923,3 +923,378 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================================
+   QUOTE DECODER — FULL REDESIGN
+   ========================================================= */
+
+.quote-decoder {
+    position: relative;
+    overflow: hidden;
+    padding-top: clamp(34px, 4vw, 58px) !important;
+    padding-bottom: clamp(34px, 4vw, 58px) !important;
+    background:
+        radial-gradient(circle at 12% 0%, rgba(255, 210, 26, 0.13), transparent 28%),
+        radial-gradient(circle at 88% 24%, rgba(241, 90, 36, 0.1), transparent 32%),
+        linear-gradient(180deg, var(--color-bg-white), var(--color-bg-light));
+}
+
+.quote-decoder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(17, 20, 23, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(17, 20, 23, 0.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(circle at center, black, transparent 76%);
+    pointer-events: none;
+}
+
+.quote-decoder__layout {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.4fr);
+    gap: clamp(34px, 5vw, 74px);
+    align-items: center;
+}
+
+.quote-decoder__intro {
+    max-width: 470px;
+}
+
+.quote-decoder__intro h2 {
+    color: var(--color-text-dark);
+    font-family: var(--font-heading);
+    font-size: clamp(2.25rem, 4.8vw, 4.35rem);
+    line-height: 0.94;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.quote-decoder__intro p {
+    margin-top: 16px;
+    color: var(--color-text-muted);
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+/* track */
+.quote-decoder__track {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    padding-top: 36px;
+}
+
+.quote-decoder__line {
+    position: absolute;
+    top: 64px;
+    left: 7%;
+    right: 7%;
+    z-index: 0;
+    height: 2px;
+    background:
+        linear-gradient(90deg,
+            rgba(255, 210, 26, 0.1),
+            rgba(255, 210, 26, 0.9),
+            rgba(241, 90, 36, 0.78),
+            rgba(255, 210, 26, 0.1));
+    box-shadow: var(--shadow-yellow-glow);
+}
+
+.quote-decoder__current {
+    position: absolute;
+    top: 56px;
+    left: 7%;
+    z-index: 4;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--color-accent-yellow);
+    box-shadow:
+        0 0 0 8px rgba(255, 210, 26, 0.12),
+        0 0 30px rgba(255, 210, 26, 0.7),
+        0 0 46px rgba(241, 90, 36, 0.42);
+    animation: quoteDecoderCurrent 5.2s linear infinite;
+}
+
+/* items */
+.quote-decoder__item {
+    position: relative;
+    z-index: 2;
+    min-height: 218px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22px;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(circle at 86% 0%, rgba(255, 210, 26, 0.13), transparent 32%),
+        rgba(255, 255, 255, 0.82);
+    box-shadow: 0 18px 46px rgba(17, 20, 23, 0.08);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.quote-decoder__item--dark {
+    color: var(--color-text-light);
+    border-color: var(--color-border-dark);
+    background:
+        radial-gradient(circle at 86% 0%, rgba(255, 210, 26, 0.16), transparent 32%),
+        radial-gradient(circle at 14% 100%, rgba(241, 90, 36, 0.15), transparent 36%),
+        linear-gradient(180deg, var(--color-bg-card), var(--color-bg-dark));
+    box-shadow: var(--shadow-dark-card);
+}
+
+.quote-decoder__icon {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    color: var(--color-bg-dark);
+    border-radius: 18px;
+    background:
+        linear-gradient(135deg,
+            var(--color-accent-yellow),
+            var(--color-accent-orange));
+    box-shadow: var(--shadow-yellow-glow);
+}
+
+.quote-decoder__icon::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border: 1px solid rgba(255, 210, 26, 0.22);
+    border-radius: 22px;
+    animation: quoteDecoderRing 5s linear infinite;
+}
+
+.quote-decoder__icon i {
+    position: relative;
+    z-index: 2;
+    font-size: 1.25rem;
+}
+
+.quote-decoder__number {
+    display: inline-flex;
+    margin-bottom: 8px;
+    color: var(--color-accent-orange);
+    font-family: var(--font-heading);
+    font-size: 1.28rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.08em;
+}
+
+.quote-decoder__item--dark .quote-decoder__number {
+    color: var(--color-accent-yellow);
+}
+
+.quote-decoder__item h3 {
+    color: var(--color-text-dark);
+    font-size: 1.02rem;
+    line-height: 1.15;
+}
+
+.quote-decoder__item--dark h3 {
+    color: var(--color-text-light);
+}
+
+.quote-decoder__item p {
+    margin-top: 8px;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+.quote-decoder__item--dark p {
+    color: var(--color-text-muted-light);
+}
+
+.quote-decoder__item:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 210, 26, 0.42);
+    box-shadow:
+        0 28px 70px rgba(17, 20, 23, 0.16),
+        var(--shadow-yellow-glow);
+}
+
+.quote-decoder__item:hover .quote-decoder__icon {
+    animation: quoteDecoderZap 620ms ease;
+}
+
+@keyframes quoteDecoderCurrent {
+    0% {
+        left: 7%;
+        opacity: 0;
+        transform: scale(0.75);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        left: calc(93% - 18px);
+        opacity: 0;
+        transform: scale(0.75);
+    }
+}
+
+@keyframes quoteDecoderRing {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes quoteDecoderZap {
+    0% {
+        transform: translateY(-50%) rotate(0deg) scale(1);
+    }
+
+    40% {
+        transform: translateY(-50%) rotate(-8deg) scale(1.08);
+    }
+
+    70% {
+        transform: translateY(-50%) rotate(6deg) scale(1.03);
+    }
+
+    100% {
+        transform: translateY(-50%) rotate(0deg) scale(1);
+    }
+}
+
+/* TABLET */
+@media (min-width: 761px) and (max-width: 1080px) {
+    .quote-decoder {
+        padding-top: 38px !important;
+        padding-bottom: 38px !important;
+    }
+
+    .quote-decoder__layout {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .quote-decoder__intro {
+        max-width: 760px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .quote-decoder__intro p {
+        max-width: 620px;
+        margin-inline: auto;
+    }
+
+    .quote-decoder__track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        padding-top: 0;
+    }
+
+    .quote-decoder__line,
+    .quote-decoder__current {
+        display: none;
+    }
+
+    .quote-decoder__item {
+        min-height: 180px;
+        padding: 22px 84px 22px 22px;
+    }
+
+    .quote-decoder__icon {
+        top: 22px;
+        right: 22px;
+        transform: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 16px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 760px) {
+    .quote-decoder {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .quote-decoder__layout {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    .quote-decoder__intro h2 {
+        font-size: clamp(2.15rem, 12vw, 3.1rem);
+    }
+
+    .quote-decoder__track {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding-top: 0;
+    }
+
+    .quote-decoder__line,
+    .quote-decoder__current {
+        display: none;
+    }
+
+    .quote-decoder__item {
+        min-height: 118px;
+        padding: 18px 76px 18px 18px;
+        border-radius: 20px;
+    }
+
+    .quote-decoder__icon {
+        top: 18px;
+        right: 18px;
+        transform: none;
+        width: 46px;
+        height: 46px;
+        border-radius: 15px;
+    }
+
+    .quote-decoder__icon::before {
+        inset: -6px;
+        border-radius: 18px;
+    }
+
+    .quote-decoder__number {
+        margin-bottom: 6px;
+        font-size: 1rem;
+    }
+
+    .quote-decoder__item h3 {
+        font-size: 0.98rem;
+    }
+
+    .quote-decoder__item p {
+        max-width: 230px;
+        font-size: 0.76rem;
+    }
+}
