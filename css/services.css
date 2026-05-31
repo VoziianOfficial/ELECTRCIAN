@@ -378,27 +378,27 @@
 }
 
 .object-tabs__image--charger::before {
-    background-image: url("../images/ev-charger.jpg");
+    background-image: url("../assets/images/ev-charger.jpg");
 }
 
 .object-tabs__image--cord::before {
-    background-image: url("../images/electrical-tools.jpg");
+    background-image: url("../assets/images/electrical-tools.jpg");
 }
 
 .object-tabs__image--wire::before {
-    background-image: url("../images/wiring-rewiring.jpg");
+    background-image: url("../assets/images/wiring-rewiring.jpg");
 }
 
 .object-tabs__image--light::before {
-    background-image: url("../images/lighting-detail.jpg");
+    background-image: url("../assets/images/lighting-detail.jpg");
 }
 
 .object-tabs__image--battery::before {
-    background-image: url("../images/quote-clarity.jpg");
+    background-image: url("../assets/images/quote-clarity.jpg");
 }
 
 .object-tabs__image--panel::before {
-    background-image: url("../images/breaker-panel.jpg");
+    background-image: url("../assets/images/breaker-panel.jpg");
 }
 
 .object-tabs__content {

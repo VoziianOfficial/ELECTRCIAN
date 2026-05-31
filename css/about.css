@@ -347,7 +347,7 @@
     border-radius: var(--radius-lg);
     background:
         linear-gradient(90deg, rgba(11, 13, 15, 0.94), rgba(11, 13, 15, 0.62)),
-        url("../images/breaker-panel.jpg") center / cover no-repeat;
+        url("../assets/images/breaker-panel.jpg") center / cover no-repeat;
     box-shadow: var(--shadow-dark-card);
 }
 

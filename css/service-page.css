@@ -583,28 +583,28 @@
 .service-final-cta {
     background:
         linear-gradient(90deg, rgba(11, 13, 15, 0.94), rgba(11, 13, 15, 0.66)),
-        url("../images/lighting-detail.jpg") center / cover no-repeat,
+        url("../assets/images/lighting-detail.jpg") center / cover no-repeat,
         var(--color-bg-dark);
 }
 
 .page-panel-upgrades .service-final-cta {
     background:
         linear-gradient(90deg, rgba(11, 13, 15, 0.94), rgba(11, 13, 15, 0.66)),
-        url("../images/breaker-panel.jpg") center / cover no-repeat,
+        url("../assets/images/breaker-panel.jpg") center / cover no-repeat,
         var(--color-bg-dark);
 }
 
 .page-wiring-rewiring .service-final-cta {
     background:
         linear-gradient(90deg, rgba(11, 13, 15, 0.94), rgba(11, 13, 15, 0.66)),
-        url("../images/home-wiring.jpg") center / cover no-repeat,
+        url("../assets/images/home-wiring.jpg") center / cover no-repeat,
         var(--color-bg-dark);
 }
 
 .page-ev-charger-installation .service-final-cta {
     background:
         linear-gradient(90deg, rgba(11, 13, 15, 0.94), rgba(11, 13, 15, 0.66)),
-        url("../images/ev-charger.jpg") center / cover no-repeat,
+        url("../assets/images/ev-charger.jpg") center / cover no-repeat,
         var(--color-bg-dark);
 }
 

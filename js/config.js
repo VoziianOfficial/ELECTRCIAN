@@ -366,7 +366,7 @@ window.SITE_CONFIG = {
         {
             id: 'cord',
             label: 'Cord',
-            image: 'assets/images/electrical-tools.jpg',
+            image: '../assets/images/emergency.jpg',
             title: 'Cord, outlet, and load concerns',
             text:
                 'Outlet and cord-related needs can involve load safety, outlet condition, replacement scope, and provider diagnostic details.',
@@ -411,7 +411,7 @@ window.SITE_CONFIG = {
         {
             id: 'battery',
             label: 'Battery',
-            image: 'assets/images/quote-clarity.jpg',
+            image: '../assets/images/quote-clarity.jpg',
             title: 'Power readiness and backup questions',
             text:
                 'Power-related projects may require provider review of load needs, circuit conditions, panel readiness, and safety details.',
@@ -426,7 +426,7 @@ window.SITE_CONFIG = {
         {
             id: 'panel',
             label: 'Panel',
-            image: 'assets/images/breaker-panel.jpg',
+            image: '../assets/images/breaker-panel.jpg',
             title: 'Panel and breaker considerations',
             text:
                 'Panel-related projects can involve capacity, breaker layout, permit notes, service upgrade questions, and warranty terms.',

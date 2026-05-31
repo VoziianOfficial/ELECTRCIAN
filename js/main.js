@@ -1055,7 +1055,7 @@
 
         const projectData = {
             Residential: {
-                image: './assets/images/home-wiring.jpg',
+                image: '../assets/images/home-wiring.jpg',
                 label: 'Residential electrical',
                 items: [
                     'Home wiring & rewiring',
@@ -1068,7 +1068,7 @@
             },
 
             Commercial: {
-                image: './assets/images/breaker-panel.jpg',
+                image: '../assets/images/breaker-panel.jpg',
                 label: 'Commercial electrical',
                 items: [
                     'Office lighting updates',
@@ -1081,7 +1081,7 @@
             },
 
             Emergency: {
-                image: './assets/images/electrical-tools.jpg',
+                image: '../assets/images/emergency.jpg',
                 label: 'Emergency electrical',
                 items: [
                     'Power loss concerns',
@@ -1094,7 +1094,7 @@
             },
 
             Industrial: {
-                image: './assets/images/quote-clarity.jpg',
+                image: '../assets/images/quote-clarity.jpg',
                 label: 'Industrial electrical',
                 items: [
                     'High-load electrical planning',

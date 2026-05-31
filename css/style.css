@@ -1754,7 +1754,7 @@ h6 {
     border-radius: var(--radius-lg);
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)),
-        url("../images/home-wiring.jpg") center / cover no-repeat,
+        url("../assets/images/home-wiring.jpg") center / cover no-repeat,
         linear-gradient(135deg, #15191E, #2D343A);
     border: 1px solid var(--color-border-light);
     box-shadow: 0 24px 64px rgba(17, 20, 23, 0.14);
@@ -4010,7 +4010,7 @@ body {
     overflow: hidden;
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)),
-        var(--project-image, url("../images/home-wiring.jpg")) center / cover no-repeat,
+        var(--project-image, url("../assets/images/home-wiring.jpg")) center / cover no-repeat,
         linear-gradient(135deg, #15191E, #2D343A);
     transition:
         opacity var(--transition-base),
