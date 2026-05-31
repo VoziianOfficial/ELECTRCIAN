@@ -650,3 +650,24 @@
         max-height: 220px;
     }
 }
+
+/* HERO TITLE COLOR FIX */
+
+.hero__title .color {
+    color: #fff !important;
+    text-shadow: none !important;
+}
+
+.hero__title .color::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* если Providers должен остаться жёлтым */
+.hero__title>span:not(.color) {
+    position: relative;
+    display: inline-block;
+    color: var(--color-accent-yellow) !important;
+    text-shadow: 0 0 34px rgba(255, 210, 26, 0.26);
+}
+
