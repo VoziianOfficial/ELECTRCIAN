@@ -220,87 +220,95 @@
             </div>
         </section>
 
-        <!-- SERVICES -->
-        <section class="services section section--light" id="services">
-            <div class="container">
-                <div class="section-heading section-heading--center">
-                    <span class="section-kicker">Popular electrical services</span>
-                    <h2>What do you need help with?</h2>
-                    <p>
-                        Browse common electrical service categories and compare local provider options
-                        based on your home, project type, and timeline.
-                    </p>
-                </div>
-
-                <div class="services-grid">
-                    <article class="service-card">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <h3>Electrical Repairs</h3>
-                        <p>Fix outlets, switches, breakers, flickering lights and similar issues.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <i class="fa-solid fa-table-columns"></i>
-                        <h3>Panel Upgrades</h3>
-                        <p>Improve panel capacity, modernize systems and support new loads.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <i class="fa-regular fa-lightbulb"></i>
-                        <h3>Lighting Installation</h3>
-                        <p>Indoor, outdoor and recessed lighting installation options.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <i class="fa-solid fa-toggle-on"></i>
-                        <h3>Outlets & Switches</h3>
-                        <p>Install or update outlets, dimmers, smart switches and controls.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <i class="fa-solid fa-car-side"></i>
-                        <h3>EV Charger Installation</h3>
-                        <p>Compare provider options for home EV charging solutions.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <i class="fa-solid fa-plug-circle-bolt"></i>
-                        <h3>Wiring & Rewiring</h3>
-                        <p>New wiring, full rewiring and electrical layout adjustments.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <h3>Surge Protection</h3>
-                        <p>Protect your home, appliances and devices with surge solutions.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <i class="fa-solid fa-fan"></i>
-                        <h3>Ceiling Fans</h3>
-                        <p>Installation and replacement for comfort and airflow improvement.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <i class="fa-solid fa-house-signal"></i>
-                        <h3>Smart Home Wiring</h3>
-                        <p>Compare options for connected switches, systems and smart upgrades.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                        <h3>Emergency Electrical</h3>
-                        <p>Urgent provider options for outages, burning smells and breaker issues.</p>
-                    </article>
-                </div>
-
-                <div class="section-actions section-actions--center">
-                    <a href="./services.html" class="btn btn--outline">
-                        <span>View All Services</span>
-                    </a>
-                </div>
+    <!-- ELECTRICAL ICON MARQUEE -->
+    <section class="electric-marquee-section section section--light" id="services">
+        <div class="container">
+            <div class="section-heading section-heading--center electric-marquee-heading">
+                <span class="section-kicker">Electrical categories</span>
+                <h2>Explore the power path.</h2>
             </div>
-        </section>
+        </div>
+    
+        <div class="electric-marquee" aria-label="Electrical service icons running loop">
+            <div class="electric-marquee__track">
+                <a href="./electrical-repair.html" class="electric-marquee__icon" aria-label="Electrical repair">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </a>
+                <a href="./panel-upgrades.html" class="electric-marquee__icon" aria-label="Panel upgrades">
+                    <i class="fa-solid fa-table-columns"></i>
+                </a>
+                <a href="./wiring-rewiring.html" class="electric-marquee__icon" aria-label="Wiring and rewiring">
+                    <i class="fa-solid fa-plug-circle-bolt"></i>
+                </a>
+                <a href="./ev-charger-installation.html" class="electric-marquee__icon"
+                    aria-label="EV charger installation">
+                    <i class="fa-solid fa-car-battery"></i>
+                </a>
+                <span class="electric-marquee__icon" aria-label="Lighting">
+                    <i class="fa-regular fa-lightbulb"></i>
+                </span>
+                <span class="electric-marquee__icon" aria-label="Switches">
+                    <i class="fa-solid fa-toggle-on"></i>
+                </span>
+                <span class="electric-marquee__icon" aria-label="Surge protection">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </span>
+                <span class="electric-marquee__icon" aria-label="Emergency electrical">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </span>
+    
+                <!-- duplicate for smooth infinite loop -->
+                <a href="./electrical-repair.html" class="electric-marquee__icon" aria-label="Electrical repair">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </a>
+                <a href="./panel-upgrades.html" class="electric-marquee__icon" aria-label="Panel upgrades">
+                    <i class="fa-solid fa-table-columns"></i>
+                </a>
+                <a href="./wiring-rewiring.html" class="electric-marquee__icon" aria-label="Wiring and rewiring">
+                    <i class="fa-solid fa-plug-circle-bolt"></i>
+                </a>
+                <a href="./ev-charger-installation.html" class="electric-marquee__icon"
+                    aria-label="EV charger installation">
+                    <i class="fa-solid fa-car-battery"></i>
+                </a>
+                <span class="electric-marquee__icon" aria-label="Lighting">
+                    <i class="fa-regular fa-lightbulb"></i>
+                </span>
+                <span class="electric-marquee__icon" aria-label="Switches">
+                    <i class="fa-solid fa-toggle-on"></i>
+                </span>
+                <span class="electric-marquee__icon" aria-label="Surge protection">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </span>
+                <span class="electric-marquee__icon" aria-label="Emergency electrical">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </span>
+            </div>
+        </div>
+    
+        <div class="electric-marquee electric-marquee--reverse" aria-hidden="true">
+            <div class="electric-marquee__track">
+                <span class="electric-marquee__icon"><i class="fa-solid fa-bolt"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-plug"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-fan"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-house-signal"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-car-side"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-gauge-high"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-solar-panel"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-power-off"></i></span>
+    
+                <!-- duplicate for smooth infinite loop -->
+                <span class="electric-marquee__icon"><i class="fa-solid fa-bolt"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-plug"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-fan"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-house-signal"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-car-side"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-gauge-high"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-solar-panel"></i></span>
+                <span class="electric-marquee__icon"><i class="fa-solid fa-power-off"></i></span>
+            </div>
+        </div>
+    </section>
 
         <!-- COMPARISON BAND -->
         <section class="comparison-band section section--white">
