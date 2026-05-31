@@ -10,7 +10,7 @@
 .page-about .about-hero .hero__bg {
     background:
         linear-gradient(90deg, rgba(11, 13, 15, 0.96) 0%, rgba(11, 13, 15, 0.82) 46%, rgba(11, 13, 15, 0.58) 100%),
-        url("../images/about-hero.jpg") center / cover no-repeat,
+        url("../assets/images/about-hero.jpg") center / cover no-repeat,
         radial-gradient(circle at 78% 22%, rgba(241, 90, 36, 0.18), transparent 32%),
         linear-gradient(135deg, #0B0D0F, #1D2227);
 }
@@ -73,7 +73,7 @@
     border-radius: var(--radius-lg);
     background:
         linear-gradient(180deg, rgba(11, 13, 15, 0.06), rgba(11, 13, 15, 0.68)),
-        url("../images/electrical-tools.jpg") center / cover no-repeat;
+        url("../assets/images/electrical-tools.jpg") center / cover no-repeat;
     box-shadow: 0 26px 70px rgba(17, 20, 23, 0.14);
 }
 
