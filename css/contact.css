@@ -744,3 +744,198 @@
         font-size: 0.78rem;
     }
 }
+
+/* =========================================================
+   CONTACT FORM SECTION — COMPACT VERSION
+   ========================================================= */
+
+.contact-form-section {
+    padding-top: clamp(32px, 4vw, 56px) !important;
+    padding-bottom: clamp(32px, 4vw, 56px) !important;
+}
+
+.contact-form-section__grid {
+    align-items: center;
+    gap: clamp(28px, 5vw, 62px);
+}
+
+.contact-form-section__intro {
+    max-width: 480px;
+}
+
+.contact-form-section__intro h2 {
+    font-size: clamp(2.2rem, 4.8vw, 4.25rem);
+}
+
+.contact-form-section__intro p {
+    max-width: 440px;
+}
+
+.contact-form-section__note {
+    margin-top: 22px;
+    padding: 14px;
+}
+
+/* сама форма меньше */
+.contact-form-card {
+    width: 100%;
+    max-width: 520px;
+    justify-self: end;
+    padding: 22px !important;
+    border-radius: var(--radius-md);
+}
+
+.contact-form {
+    gap: 12px !important;
+}
+
+.contact-form__row {
+    gap: 12px !important;
+}
+
+/* поля ниже */
+.contact-form-section .form-field {
+    gap: 5px;
+}
+
+.contact-form-section .form-field label {
+    font-size: 0.76rem;
+}
+
+.contact-form-section .form-field input,
+.contact-form-section .form-field select {
+    min-height: 42px !important;
+    padding-inline: 12px !important;
+    font-size: 0.86rem;
+}
+
+.contact-form-section .form-field textarea {
+    min-height: 86px !important;
+    padding: 12px !important;
+    font-size: 0.86rem;
+}
+
+/* чекбокс компактнее */
+.contact-form-section .custom-checkbox {
+    gap: 10px;
+    padding: 12px !important;
+}
+
+.contact-form-section .custom-checkbox__text {
+    font-size: 0.74rem;
+    line-height: 1.45;
+}
+
+/* кнопка ниже */
+.contact-form-section .btn {
+    min-height: 44px !important;
+}
+
+.contact-form__helper {
+    margin-top: 4px;
+    font-size: 0.74rem;
+}
+
+/* TABLET */
+@media (min-width: 761px) and (max-width: 1080px) {
+    .contact-form-section {
+        padding-top: 38px !important;
+        padding-bottom: 38px !important;
+    }
+
+    .contact-form-section__grid {
+        grid-template-columns: 0.85fr 1fr;
+        gap: 32px;
+    }
+
+    .contact-form-card {
+        max-width: 500px;
+        padding: 20px !important;
+    }
+
+    .contact-form-section__intro h2 {
+        font-size: clamp(2rem, 5vw, 3.4rem);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 760px) {
+    .contact-form-section {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .contact-form-section__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .contact-form-section__intro {
+        max-width: 100%;
+    }
+
+    .contact-form-card {
+        max-width: 100%;
+        justify-self: stretch;
+        padding: 18px !important;
+    }
+
+    .contact-form__row {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-form-section .form-field input,
+    .contact-form-section .form-field select {
+        min-height: 42px !important;
+    }
+
+    .contact-form-section .form-field textarea {
+        min-height: 80px !important;
+    }
+}
+
+/* CONTACT FORM HEADING — TWO LINES */
+
+.contact-form-section__grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(420px, 0.85fr) !important;
+}
+
+.contact-form-section__intro {
+    max-width: 620px !important;
+}
+
+.contact-form-section__intro h2 {
+    max-width: 620px !important;
+    font-size: clamp(2.6rem, 5vw, 4.6rem) !important;
+    line-height: 0.92 !important;
+}
+
+/* планшет */
+@media (min-width: 761px) and (max-width: 1080px) {
+    .contact-form-section__grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-form-section__intro {
+        max-width: 720px !important;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .contact-form-section__intro h2 {
+        max-width: 720px !important;
+        margin-inline: auto;
+    }
+
+    .contact-form-section__intro p {
+        margin-inline: auto;
+    }
+}
+
+/* мобилка */
+@media (max-width: 760px) {
+    .contact-form-section__intro h2 {
+        max-width: 100% !important;
+        font-size: clamp(2.35rem, 12vw, 3.25rem) !important;
+    }
+}
