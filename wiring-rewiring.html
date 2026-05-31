@@ -471,45 +471,56 @@
             </div>
         </section>
 
-        <!-- 5. PROJECT COMPLEXITY / FIT -->
-        <section class="service-fit-section section section--dark" id="project-fit" data-section="Fit">
-            <div class="container">
-                <div class="section-heading section-heading--center section-heading--light">
-                    <span class="section-kicker">Project complexity / fit</span>
-                    <h2>Wiring complexity depends on access, layout, old wiring, and system requirements.</h2>
-                    <p>
-                        This scale helps homeowners think about provider fit before comparing quote options.
-                        It does not replace professional review or code-related verification.
-                    </p>
-                </div>
-
-                <div class="service-fit-scale">
-                    <article class="service-fit-card">
-                        <span>01</span>
-                        <h3>Simple</h3>
-                        <p>Small circuit updates, fixture wiring, or minor outlet additions.</p>
-                    </article>
-
-                    <article class="service-fit-card">
-                        <span>02</span>
-                        <h3>Medium</h3>
-                        <p>Room remodel wiring, outdoor wiring, or smart home wiring.</p>
-                    </article>
-
-                    <article class="service-fit-card">
-                        <span>03</span>
-                        <h3>Advanced</h3>
-                        <p>Whole-home rewiring, old wiring replacement, or major circuit planning.</p>
-                    </article>
-
-                    <article class="service-fit-card service-fit-card--urgent">
-                        <span>04</span>
-                        <h3>Urgent</h3>
-                        <p>Exposed wiring, burning smell, sparks, smoke, or unsafe old wiring.</p>
-                    </article>
-                </div>
+    <!-- 5. PROJECT COMPLEXITY / FIT -->
+    <section class="service-fit-line section section--dark" id="project-fit" data-section="Fit">
+        <div class="container">
+            <div class="service-fit-line__head">
+                <span class="section-kicker">Project complexity / fit</span>
+                <h2>Repair urgency depends on symptoms and system context.</h2>
+                <p>
+                    Use this simple scale to understand how repair requests may be compared.
+                    It does not replace professional review by a qualified provider.
+                </p>
             </div>
-        </section>
+    
+            <div class="service-fit-line__track" aria-label="Electrical repair complexity scale">
+                <span class="service-fit-line__wire" aria-hidden="true"></span>
+                <span class="service-fit-line__current" aria-hidden="true"></span>
+    
+                <article class="service-fit-line__point">
+                    <span class="service-fit-line__node">01</span>
+                    <div class="service-fit-line__text">
+                        <h3>Simple</h3>
+                        <p>Outlet replacement, switch updates, light fixture problems.</p>
+                    </div>
+                </article>
+    
+                <article class="service-fit-line__point">
+                    <span class="service-fit-line__node">02</span>
+                    <div class="service-fit-line__text">
+                        <h3>Medium</h3>
+                        <p>Repeated breaker trips, flickering lights, partial power loss.</p>
+                    </div>
+                </article>
+    
+                <article class="service-fit-line__point">
+                    <span class="service-fit-line__node">03</span>
+                    <div class="service-fit-line__text">
+                        <h3>Advanced</h3>
+                        <p>Panel-related repair needs or multiple affected circuits.</p>
+                    </div>
+                </article>
+    
+                <article class="service-fit-line__point service-fit-line__point--urgent">
+                    <span class="service-fit-line__node">04</span>
+                    <div class="service-fit-line__text">
+                        <h3>Urgent</h3>
+                        <p>Burning smell, exposed wiring, hot outlets, major power loss.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
         <!-- 6. SERVICE FAQ -->
         <section class="service-faq section section--light" id="service-faq" data-section="FAQ">
