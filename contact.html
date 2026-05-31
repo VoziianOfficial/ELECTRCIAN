@@ -291,16 +291,6 @@
                                 placeholder="Tell us what you need help comparing..." required></textarea>
                         </div>
 
-                        <label class="custom-checkbox">
-                            <input type="checkbox" name="consent" required />
-                            <span class="custom-checkbox__box" aria-hidden="true"></span>
-                            <span class="custom-checkbox__text">
-                                By submitting, you agree that {{companyName}} may help organize your
-                                request for independent provider comparison. Provider availability,
-                                pricing, and response times may vary.
-                            </span>
-                        </label>
-
                         <button type="submit" class="btn btn--accent btn--full">
                             <span>Submit Request</span>
                         </button>
@@ -313,54 +303,54 @@
             </div>
         </section>
 
-        <!-- 3. CONTACT INFO CARDS -->
-        <section class="section section--white contact-info-section" id="contact-info" data-section="Info">
-            <div class="container">
-                <div class="section-heading section-heading--center">
-                    <span class="section-kicker">Contact information</span>
-                    <h2>Ways to reach the platform.</h2>
-                    <p>
-                        Use these details for general support and provider comparison questions.
-                    </p>
-                </div>
-
-                <div class="contact-info-grid">
-                    <article class="contact-info-card">
-                        <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
-                        <h3>Phone</h3>
-                        <p>Call for general provider comparison support.</p>
+    <!-- 3. CONTACT INFO STRIP -->
+    <section class="section section--white contact-info-section" id="contact-info" data-section="Info">
+        <div class="container">
+            <div class="section-heading section-heading--center contact-info-heading">
+                <span class="section-kicker">Contact information</span>
+                <h2>Reach the platform directly.</h2>
+                <p>
+                    Use these details for general support and provider comparison questions.
+                </p>
+            </div>
+    
+            <div class="contact-info-strip">
+                <article class="contact-info-card contact-info-card--compact">
+                    <div class="contact-info-card__content">
+                        <span>Phone</span>
+                        <h3>Call support</h3>
                         <a href="tel:+18885550192" data-phone-link data-phone-text>
                             (888) 555-0192
                         </a>
-                    </article>
-
-                    <article class="contact-info-card">
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        <h3>Email</h3>
-                        <p>Send questions about requests or platform information.</p>
+                    </div>
+    
+                    <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
+                </article>
+    
+                <article class="contact-info-card contact-info-card--compact">
+                    <div class="contact-info-card__content">
+                        <span>Email</span>
+                        <h3>Send a question</h3>
                         <a href="mailto:hello@electrcian.com" data-email-link data-email-text>
                             hello@electrcian.com
                         </a>
-                    </article>
-
-                    <article class="contact-info-card">
-                        <i class="fa-solid fa-clock" aria-hidden="true"></i>
-                        <h3>Support hours</h3>
-                        <p>General support availability.</p>
+                    </div>
+    
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </article>
+    
+                <article class="contact-info-card contact-info-card--compact">
+                    <div class="contact-info-card__content">
+                        <span>Hours</span>
+                        <h3>Support availability</h3>
                         <strong data-support-hours>Mon–Fri, 8:00 AM–7:00 PM</strong>
-                    </article>
-
-                    <article class="contact-info-card">
-                        <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
-                        <h3>Service area</h3>
-                        <p>Provider matching availability may vary by location.</p>
-                        <strong data-service-area>
-                            Independent electrical provider matching across selected areas in the United States
-                        </strong>
-                    </article>
-                </div>
+                    </div>
+    
+                    <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                </article>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- 4. COVERAGE CARD INSTEAD OF MAP -->
         <section class="section section--light contact-coverage-section" id="coverage" data-section="Coverage">
