@@ -164,6 +164,7 @@
         applyPageMeta();
         applyConfigData();
         replaceTextTokens();
+        syncSiteIdentity();
         initHeaderOffset();
         initServicesDropdown();
         initMobileMenu();
@@ -332,6 +333,158 @@
                 }
             });
         });
+    }
+
+    function syncSiteIdentity() {
+        const identity = {
+            companyName: CONFIG.company.name,
+            companyId: CONFIG.company.companyId,
+
+            phoneRaw: CONFIG.contact.phoneRaw,
+            phoneDisplay: CONFIG.contact.phoneDisplay,
+            phoneButtonText: CONFIG.contact.phoneButtonText,
+            email: CONFIG.contact.email,
+
+            addressLine1: CONFIG.company.address.line1,
+            addressCity: CONFIG.company.address.city,
+            addressState: CONFIG.company.address.state,
+            addressZip: CONFIG.company.address.zip,
+            addressCountry: CONFIG.company.address.country,
+            addressFull: CONFIG.company.address.full,
+
+            serviceArea: CONFIG.company.serviceArea,
+            supportHours: CONFIG.contact.supportHours,
+            disclaimer: CONFIG.legal.disclaimer,
+            legalNotice: CONFIG.legal.shortNotice,
+            footerText: CONFIG.footer.description
+        };
+
+        const oldValues = [
+            [DEFAULT_CONFIG.company.name, identity.companyName],
+            [DEFAULT_CONFIG.company.companyId, identity.companyId],
+
+            [DEFAULT_CONFIG.contact.phoneRaw, identity.phoneRaw],
+            [DEFAULT_CONFIG.contact.phoneDisplay, identity.phoneDisplay],
+            [DEFAULT_CONFIG.contact.email, identity.email],
+            [DEFAULT_CONFIG.contact.phoneButtonText, identity.phoneButtonText],
+            [DEFAULT_CONFIG.contact.supportHours, identity.supportHours],
+
+            [DEFAULT_CONFIG.company.address.line1, identity.addressLine1],
+            [DEFAULT_CONFIG.company.address.city, identity.addressCity],
+            [DEFAULT_CONFIG.company.address.state, identity.addressState],
+            [DEFAULT_CONFIG.company.address.zip, identity.addressZip],
+            [DEFAULT_CONFIG.company.address.country, identity.addressCountry],
+            [DEFAULT_CONFIG.company.address.full, identity.addressFull],
+
+            [DEFAULT_CONFIG.company.serviceArea, identity.serviceArea],
+            [DEFAULT_CONFIG.legal.disclaimer, identity.disclaimer],
+            [DEFAULT_CONFIG.legal.shortNotice, identity.legalNotice],
+            [DEFAULT_CONFIG.footer.description, identity.footerText]
+        ].filter(function (pair) {
+            return pair[0] && pair[1] && pair[0] !== pair[1];
+        });
+
+        function replaceIdentityValue(value) {
+            if (!value || typeof value !== 'string') return value;
+
+            let output = replaceTokens(value);
+
+            oldValues.forEach(function (pair) {
+                const from = pair[0];
+                const to = pair[1];
+
+                output = output.replace(new RegExp(escapeRegExp(from), 'g'), to);
+            });
+
+            return output;
+        }
+
+        const skipTags = ['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE'];
+
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode: function (node) {
+                    const parent = node.parentElement;
+
+                    if (!parent || skipTags.includes(parent.tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        textNodes.forEach(function (node) {
+            node.nodeValue = replaceIdentityValue(node.nodeValue);
+        });
+
+        const attributesToSync = [
+            'title',
+            'alt',
+            'aria-label',
+            'placeholder',
+            'value',
+            'content',
+            'href',
+            'data-label'
+        ];
+
+        document.querySelectorAll('*').forEach(function (element) {
+            attributesToSync.forEach(function (attr) {
+                if (!element.hasAttribute(attr)) return;
+
+                const oldValue = element.getAttribute(attr);
+                const newValue = replaceIdentityValue(oldValue);
+
+                if (oldValue !== newValue) {
+                    element.setAttribute(attr, newValue);
+                }
+            });
+        });
+
+        setText('[data-company-name]', identity.companyName);
+        setText('[data-company-id]', identity.companyId);
+        setText('[data-phone-text]', identity.phoneDisplay);
+        setText('[data-email-text]', identity.email);
+        setText('[data-address-text]', identity.addressFull);
+        setText('[data-service-area]', identity.serviceArea);
+        setText('[data-support-hours]', identity.supportHours);
+        setText('[data-footer-text]', identity.footerText);
+        setText('[data-disclaimer]', identity.disclaimer);
+        setText('[data-legal-notice]', identity.legalNotice);
+
+        document.querySelectorAll('[data-phone-link], a[href^="tel:"]').forEach(function (link) {
+            link.setAttribute('href', 'tel:' + sanitizePhone(identity.phoneRaw));
+        });
+
+        document.querySelectorAll('[data-email-link], a[href^="mailto:"]').forEach(function (link) {
+            link.setAttribute('href', 'mailto:' + identity.email);
+        });
+
+        document.title = replaceIdentityValue(document.title);
+
+        document
+            .querySelectorAll('meta[name="description"], meta[property="og:title"], meta[property="og:description"]')
+            .forEach(function (meta) {
+                const content = meta.getAttribute('content');
+
+                if (content) {
+                    meta.setAttribute('content', replaceIdentityValue(content));
+                }
+            });
+    }
+
+    function escapeRegExp(value) {
+        return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 
     function applyConfigData() {
