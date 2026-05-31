@@ -644,3 +644,52 @@
 .about-story__glow.is-active {
     opacity: 1;
 }
+
+/* =========================================================
+   HERO TITLE — ONLY CLARITY IS YELLOW
+   ========================================================= */
+
+.hero__title.hero__title--three-lines {
+    color: var(--color-text-light) !important;
+}
+
+.hero__title.hero__title--three-lines>.hero__title-line {
+    display: block;
+    color: var(--color-text-light) !important;
+    text-shadow: none !important;
+    white-space: nowrap;
+}
+
+/* убираем жёлтую подложку/линию со строк */
+.hero__title.hero__title--three-lines>.hero__title-line::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* только clarity жёлтый */
+.hero__title.hero__title--three-lines .hero__title-accent {
+    position: relative;
+    display: inline-block;
+    color: var(--color-accent-yellow) !important;
+    text-shadow: 0 0 34px rgba(255, 210, 26, 0.26) !important;
+}
+
+/* подчёркивание только под clarity */
+.hero__title.hero__title--three-lines .hero__title-accent::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    bottom: 5px;
+    height: 7px;
+    z-index: -1;
+    display: block !important;
+    background: var(--color-accent-orange);
+    opacity: 0.78;
+}
+
+@media (max-width: 760px) {
+    .hero__title.hero__title--three-lines>.hero__title-line {
+        white-space: normal;
+    }
+}
