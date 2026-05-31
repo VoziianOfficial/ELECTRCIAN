@@ -268,61 +268,59 @@
             </div>
         </section>
 
-        <!-- 2. SERVICE GRID -->
-        <section class="services section section--light" id="service-grid" data-section="Categories">
-            <div class="container">
-                <div class="section-heading section-heading--center">
-                    <span class="section-kicker">Provider comparison categories</span>
-                    <h2>Choose the electrical service category that fits your project.</h2>
+    <!-- 2. PROVIDER CHECK CIRCUIT -->
+    <section class="provider-check section" id="service-grid" data-section="Provider Check">
+        <div class="container">
+            <div class="provider-check__layout">
+                <div class="provider-check__intro">
+                    <span class="section-kicker">Before you compare</span>
+                    <h2>Check your provider fit.</h2>
                     <p>
-                        Each category helps you think through scope, materials, urgency,
-                        permits, and quote questions before comparing independent provider options.
+                        Instead of browsing the same service list again, use this quick comparison path
+                        to review the details that matter before contacting an electrical provider.
                     </p>
                 </div>
-
-                <div class="services-grid services-grid--four">
-                    <article class="service-card">
-                        <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
-                        <h3>Electrical Repair</h3>
-                        <p>
-                            Compare providers for outlet issues, switches, flickering lights,
-                            breaker concerns, and power troubleshooting.
-                        </p>
-                        <a href="./electrical-repair.html" class="service-card__link">View repair options</a>
+    
+                <div class="provider-check__circuit" aria-label="Provider comparison checklist">
+                    <span class="provider-check__line" aria-hidden="true"></span>
+                    <span class="provider-check__current" aria-hidden="true"></span>
+    
+                    <article class="provider-check__item">
+                        <span class="provider-check__node">
+                            <i class="fa-regular fa-id-card" aria-hidden="true"></i>
+                        </span>
+                        <div>
+                            <span class="provider-check__number">01</span>
+                            <h3>Verify credentials</h3>
+                            <p>Check license, insurance, and provider details before hiring.</p>
+                        </div>
                     </article>
-
-                    <article class="service-card">
-                        <i class="fa-solid fa-table-columns" aria-hidden="true"></i>
-                        <h3>Panel Upgrades</h3>
-                        <p>
-                            Review provider options for panel replacement, breaker panels,
-                            added circuits, and EV readiness.
-                        </p>
-                        <a href="./panel-upgrades.html" class="service-card__link">View panel options</a>
+    
+                    <article class="provider-check__item">
+                        <span class="provider-check__node">
+                            <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i>
+                        </span>
+                        <div>
+                            <span class="provider-check__number">02</span>
+                            <h3>Review quote scope</h3>
+                            <p>Compare labor, materials, timeline, fees, and warranty notes.</p>
+                        </div>
                     </article>
-
-                    <article class="service-card">
-                        <i class="fa-solid fa-plug-circle-bolt" aria-hidden="true"></i>
-                        <h3>Wiring & Rewiring</h3>
-                        <p>
-                            Compare companies for new wiring, rewiring, remodel electrical
-                            updates, and circuit planning.
-                        </p>
-                        <a href="./wiring-rewiring.html" class="service-card__link">View wiring options</a>
-                    </article>
-
-                    <article class="service-card">
-                        <i class="fa-solid fa-car-battery" aria-hidden="true"></i>
-                        <h3>EV Charger Installation</h3>
-                        <p>
-                            Explore providers for Level 2 charger setup, dedicated circuits,
-                            panel readiness, and permit notes.
-                        </p>
-                        <a href="./ev-charger-installation.html" class="service-card__link">View EV charger options</a>
+    
+                    <article class="provider-check__item provider-check__item--dark">
+                        <span class="provider-check__node">
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        </span>
+                        <div>
+                            <span class="provider-check__number">03</span>
+                            <h3>Choose with clarity</h3>
+                            <p>Contact the provider that fits your project, location, and urgency.</p>
+                        </div>
                     </article>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- 3. ELECTRICAL OBJECT TABS -->
         <section class="section section--white services-object-tabs" id="object-tabs" data-section="Tabs">
@@ -540,55 +538,70 @@
             </div>
         </section>
 
-        <!-- 5. QUOTE CLARITY CHECKLIST -->
-        <section class="section section--white quote-clarity-section" id="quote-clarity" data-section="Quote">
-            <div class="container comparison-band__grid">
-                <article class="comparison-panel">
+    <!-- 5. QUOTE SIGNAL -->
+    <section class="quote-signal section" id="quote-clarity" data-section="Quote">
+        <div class="container">
+            <div class="quote-signal__shell">
+                <div class="quote-signal__intro">
                     <span class="section-kicker">Electrical quote clarity</span>
-                    <h2 class="h2">A clear quote makes comparison easier.</h2>
+    
+                    <h2>Decode the quote before you choose.</h2>
+    
                     <p>
-                        Because {{companyName}} is a provider-matching platform, quote clarity matters.
-                        Homeowners should compare what each independent provider includes before
-                        choosing who to contact or hire directly.
+                        {{companyName}} helps homeowners compare provider options, but the final choice
+                        should always be based on clear scope, written terms, and verified provider details.
                     </p>
-                </article>
-
-                <article class="comparison-panel">
-                    <h3>A clear electrical quote may include:</h3>
-                    <ul class="check-list">
-                        <li>Labor scope</li>
-                        <li>Materials</li>
-                        <li>Panel / circuit notes</li>
-                        <li>Permit notes</li>
-                        <li>Timeline</li>
-                        <li>Service call fee</li>
-                        <li>Warranty terms</li>
-                    </ul>
-                </article>
-
-                <article class="comparison-panel">
-                    <h3>Questions worth asking</h3>
-                    <ol class="steps-list">
-                        <li>Is the quote written and itemized?</li>
-                        <li>Are permits or inspections needed?</li>
-                        <li>Is the service call fee included?</li>
-                        <li>What warranty terms apply?</li>
-                        <li>What timeline is realistic?</li>
-                    </ol>
-                </article>
-
-                <aside class="comparison-reminder">
-                    <div class="comparison-reminder__icon">
-                        <i class="fa-solid fa-shield-bolt" aria-hidden="true"></i>
+                </div>
+    
+                <div class="quote-signal__panel" aria-label="Electrical quote clarity signal">
+                    <span class="quote-signal__beam" aria-hidden="true"></span>
+                    <span class="quote-signal__pulse" aria-hidden="true"></span>
+    
+                    <div class="quote-signal__top">
+                        <span>
+                            <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i>
+                            Quote signal
+                        </span>
+    
+                        <strong>Review before contact</strong>
                     </div>
-                    <h3>Provider verification</h3>
-                    <p>
-                        {{companyName}} does not perform or supervise electrical work.
-                        Homeowners should verify license, insurance, permits, and quote details.
-                    </p>
-                </aside>
+    
+                    <div class="quote-signal__rows">
+                        <div class="quote-signal__row">
+                            <span>Scope</span>
+                            <strong>Labor, task limits, and what is included</strong>
+                        </div>
+    
+                        <div class="quote-signal__row">
+                            <span>Materials</span>
+                            <strong>Parts, fixtures, panel notes, and circuit details</strong>
+                        </div>
+    
+                        <div class="quote-signal__row">
+                            <span>Permits</span>
+                            <strong>Inspection needs, local requirements, and responsibility</strong>
+                        </div>
+    
+                        <div class="quote-signal__row">
+                            <span>Fees</span>
+                            <strong>Service call fee, timeline, warranty, and written terms</strong>
+                        </div>
+                    </div>
+    
+                    <div class="quote-signal__footer">
+                        <p>
+                            Homeowners should verify license, insurance, permits, quote details,
+                            and warranty terms before hiring any independent provider.
+                        </p>
+    
+                        <a href="./contact.html#contact-form" class="btn btn--accent">
+                            <span>Start quote comparison</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 <!-- WHY COMPARE / CIRCUIT LINE -->
 <section class="provider-circuit section" id="why-compare">
