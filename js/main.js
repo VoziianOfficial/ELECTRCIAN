@@ -1048,18 +1048,104 @@
 
     function initProjectTabs() {
         const tabs = document.querySelectorAll('.project-tab');
+        const visual = document.querySelector('.project-home-card');
+        const list = document.querySelector('.project-types__list');
 
-        if (!tabs.length) return;
+        if (!tabs.length || !visual || !list) return;
+
+        const projectData = {
+            Residential: {
+                image: './assets/images/home-wiring.jpg',
+                label: 'Residential electrical',
+                items: [
+                    'Home wiring & rewiring',
+                    'Lighting installation',
+                    'Outlet & switch installation',
+                    'Panel upgrades',
+                    'EV charger installation',
+                    'Ceiling fan installation'
+                ]
+            },
+
+            Commercial: {
+                image: './assets/images/breaker-panel.jpg',
+                label: 'Commercial electrical',
+                items: [
+                    'Office lighting updates',
+                    'Breaker panel review',
+                    'Dedicated circuit planning',
+                    'Tenant improvement wiring',
+                    'Code and permit questions',
+                    'Quote comparison support'
+                ]
+            },
+
+            Emergency: {
+                image: './assets/images/electrical-tools.jpg',
+                label: 'Emergency electrical',
+                items: [
+                    'Power loss concerns',
+                    'Burning smell or hot outlets',
+                    'Breaker failure',
+                    'Exposed wiring',
+                    'Urgent provider availability',
+                    'Safety-first quote review'
+                ]
+            },
+
+            Industrial: {
+                image: './assets/images/quote-clarity.jpg',
+                label: 'Industrial electrical',
+                items: [
+                    'High-load electrical planning',
+                    'Equipment circuit needs',
+                    'Panel and capacity review',
+                    'Safety documentation',
+                    'Timeline coordination',
+                    'Provider verification details'
+                ]
+            }
+        };
+
+        function updateProject(tab) {
+            const key = tab.textContent.trim();
+            const data = projectData[key];
+
+            if (!data) return;
+
+            tabs.forEach(function (item) {
+                item.classList.toggle('is-active', item === tab);
+            });
+
+            visual.classList.add('is-changing');
+
+            window.setTimeout(function () {
+                visual.style.setProperty('--project-image', 'url("' + data.image + '")');
+                visual.setAttribute('data-project-label', data.label);
+
+                list.innerHTML = '';
+
+                data.items.forEach(function (text) {
+                    const li = document.createElement('li');
+                    li.textContent = text;
+                    list.appendChild(li);
+                });
+
+                visual.classList.remove('is-changing');
+            }, 160);
+        }
 
         tabs.forEach(function (tab) {
             tab.addEventListener('click', function () {
-                tabs.forEach(function (item) {
-                    item.classList.remove('is-active');
-                });
-
-                tab.classList.add('is-active');
+                updateProject(tab);
             });
         });
+
+        const activeTab = Array.from(tabs).find(function (tab) {
+            return tab.classList.contains('is-active');
+        }) || tabs[0];
+
+        updateProject(activeTab);
     }
 
     function initRevealAnimations() {

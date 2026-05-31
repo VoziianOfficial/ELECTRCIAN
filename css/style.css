@@ -4000,3 +4000,66 @@ body {
         opacity: 0;
     }
 }
+
+/* =========================================================
+   PROJECT TYPES — SWITCHING IMAGE FIX
+   ========================================================= */
+
+.project-home-card {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)),
+        var(--project-image, url("../images/home-wiring.jpg")) center / cover no-repeat,
+        linear-gradient(135deg, #15191E, #2D343A);
+    transition:
+        opacity var(--transition-base),
+        transform var(--transition-base),
+        filter var(--transition-base);
+}
+
+.project-home-card.is-changing {
+    opacity: 0.55;
+    transform: scale(0.985);
+    filter: blur(2px);
+}
+
+.project-home-card::before {
+    content: attr(data-project-label);
+    position: absolute;
+    left: 22px;
+    bottom: 22px;
+    z-index: 2;
+    padding: 10px 13px;
+    color: var(--color-bg-dark);
+    border-radius: 999px;
+    background: linear-gradient(135deg,
+            var(--color-accent-yellow),
+            var(--color-accent-orange));
+    box-shadow: var(--shadow-yellow-glow);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.project-home-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(255, 210, 26, 0.18), transparent 32%),
+        linear-gradient(180deg, rgba(11, 13, 15, 0.08), rgba(11, 13, 15, 0.52));
+    pointer-events: none;
+}
+
+.project-types__list li {
+    transition:
+        transform var(--transition-base),
+        color var(--transition-base);
+}
+
+.project-types__list li:hover {
+    transform: translateX(4px);
+    color: var(--color-text-dark);
+}
